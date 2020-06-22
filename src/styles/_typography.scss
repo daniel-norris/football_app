@@ -26,3 +26,22 @@
     @extend %display;
     font-size: 2rem;
 }
+
+%text {
+    font-family: $font;
+}
+
+.text-1 {
+    @extend %text;
+    font-size: 3rem;
+}
+
+.text-2 {
+    @extend %text;
+    font-size: 2rem;
+}
+
+.text-3 {
+    @extend %text;
+    font-size: 1rem;
+}

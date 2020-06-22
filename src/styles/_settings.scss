@@ -53,6 +53,11 @@ $font: "SourceSansPro", helvetica, sans-serif;
     display: flex;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .container {
-    margin: auto;
+    margin: 0 auto;
+    width: 90vw;
 }

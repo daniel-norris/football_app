@@ -21,6 +21,12 @@ const App = () => {
                     </div>
                 </Route>
 
+                <Route exact path="/teams">
+                    <div className="container">
+
+                    </div>
+                </Route>
+
             <p>404. No page found.</p>
 
             </Switch>
