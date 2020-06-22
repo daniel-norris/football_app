@@ -1,0 +1,28 @@
+%display {
+    font-family: $displayFont;
+}
+
+.display-1 {
+    @extend %display;
+    font-size: 6rem;
+}
+
+.display-2 {
+    @extend %display;
+    font-size: 5rem;
+}
+
+.display-3 {
+    @extend %display;
+    font-size: 4rem;
+}
+
+.display-4 {
+    @extend %display;
+    font-size: 3rem;
+}
+
+.display-5 {
+    @extend %display;
+    font-size: 2rem;
+}

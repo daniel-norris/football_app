@@ -6,6 +6,8 @@ import {
     Switch
 } from 'react-router-dom';
 
+import Landing from './Landing/Landing';
+
 import history from '../history';
 
 const App = () => {
@@ -14,7 +16,9 @@ const App = () => {
             <Switch>
 
                 <Route exact path="/">
-                    <h1>Hello!</h1>
+                    <div className="container">
+                        <Landing />
+                    </div>
                 </Route>
 
             <p>404. No page found.</p>
