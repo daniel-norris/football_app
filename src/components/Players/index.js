@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
-import { postPlayers } from '../../data/actions/api';
+import { createPlayer } from '../../data/actions/state';
+
 
 import Players from './Players';
 
@@ -9,9 +10,11 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
-        handleSubmit: () => dispatch(postPlayers()),
-});
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleCreatePlayer: data => dispatch(createPlayer(data)),
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Players);
 
