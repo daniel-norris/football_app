@@ -8,6 +8,6 @@ export const createPlayers = (data) => {
 export const createTeams = (data) => {
     return {
         type: "CREATE_TEAMS",
-        teams: data.data
+        teams: data
     };
 };

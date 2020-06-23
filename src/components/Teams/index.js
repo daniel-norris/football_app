@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleCreateTeams: data => console.log(data)
+        handleCreateTeams: data => dispatch(postTeams(data)),
     };
 };
 

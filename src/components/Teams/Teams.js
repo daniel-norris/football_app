@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Teams extends Component {
     constructor(props) {
         super(props);
-        this.state = { squad1: "", squad2: "", players_side: 5 };
+        this.state = { team_1: "", team_2: "", players_side: 5 };
         this.handleSquadSubmit = this.handleSquadSubmit.bind(this);
         this.handleSquad1NameChange = this.handleSquad1NameChange.bind(this);
         this.handleSquad2NameChange = this.handleSquad2NameChange.bind(this);
@@ -17,11 +17,11 @@ class Teams extends Component {
     }
 
     handleSquad1NameChange(e) {
-        this.setState({ squad1: e.currentTarget.value });
+        this.setState({ team_1: e.currentTarget.value });
     }
 
     handleSquad2NameChange(e) {
-        this.setState({ squad2: e.currentTarget.value });
+        this.setState({ team_2: e.currentTarget.value });
     }
 
     handlePlayersPerSideChange(e) {

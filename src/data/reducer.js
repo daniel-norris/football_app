@@ -9,8 +9,8 @@ const createPlayers = (state, { players }) => ({
 
 const createTeams = (state, { teams }) => ({
     ...state,
-    teams: [
-        ...state.teams,
+    games: [
+        ...state.games,
         teams
     ],
 })
