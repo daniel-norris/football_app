@@ -40,6 +40,11 @@ class Players extends Component {
         this.props.handleCreatePlayer(this.state);
     }
 
+    handleClick(e) {
+        e.preventDefault();
+        this.props.handleRandomise();
+    }
+
     render() {
 
         const { players } = this.props;
@@ -114,15 +119,15 @@ class Players extends Component {
                         <button>Create</button>
                         </form>
 
-                        <Link to="/teams">
-                            <button className="btn">Confirm</button>
-                        </Link>
-
                     </section>
 
                     <Roster players={ players }/>
 
                 </main>
+
+                <Link to="/randomise">
+                    <button  className="btn">Randomise</button>
+                </Link>
             </>
         )
     }

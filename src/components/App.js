@@ -9,6 +9,7 @@ import {
 import Landing from './Landing/Landing';
 import Players from './Players/index.js';
 import Teams from './Teams/index.js';
+import Randomise from './Randomise/index.js';
 
 import history from '../history';
 
@@ -32,6 +33,12 @@ const App = () => {
                 <Route exact path="/players">
                     <div className="container">
                         <Players />
+                    </div>
+                </Route>
+
+                <Route exact path="/randomise">
+                    <div className="container">
+                        <Randomise />
                     </div>
                 </Route>
 

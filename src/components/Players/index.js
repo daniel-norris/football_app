@@ -13,6 +13,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch) => {
     return {
         handleCreatePlayer: data => dispatch(createPlayers(data)),
+
     };
 };
 
