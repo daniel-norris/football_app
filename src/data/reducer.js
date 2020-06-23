@@ -7,9 +7,18 @@ const createPlayers = (state, { players }) => ({
     ],
 })
 
+const createTeams = (state, { teams }) => ({
+    ...state,
+    teams: [
+        ...state.teams,
+        teams
+    ],
+})
+
 const reducer = (state, action) => {
     switch (action.type) {
         case "CREATE_PLAYERS": return createPlayers(state, action)
+        case "CREATE_TEAMS": return createTeams(state, action)
         default: return state;
     }
 }

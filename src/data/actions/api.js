@@ -1,4 +1,4 @@
-import { createPlayers } from './state';
+import { createTeams, createPlayers } from './state';
 
 // import API routes
 import axios from '../../axios';
@@ -11,6 +11,17 @@ export const postPlayers = () => {
          */
         axios.post("/players").then(({ data }) => {
             dispatch(createPlayers(data));
+        })
+    };
+};
+
+export const postTeams = () => {
+    return (dispatch) => {
+        /**
+         *  POST /games
+         */
+        axios.post("/games").then(({ data }) => {
+            dispatch(createTeams(data));
         })
     };
 };

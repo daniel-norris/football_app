@@ -7,8 +7,8 @@ import {
 } from 'react-router-dom';
 
 import Landing from './Landing/Landing';
-import Players from './Players/index';
-import Teams from './Teams/Teams';
+import Players from './Players/index.js';
+import Teams from './Teams/index.js';
 
 import history from '../history';
 

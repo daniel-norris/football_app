@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createPlayer } from '../../data/actions/state';
+import { createPlayers } from '../../data/actions/state';
 
 
 import Players from './Players';
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleCreatePlayer: data => dispatch(createPlayer(data)),
+        handleCreatePlayer: data => dispatch(createPlayers(data)),
     };
 };
 
