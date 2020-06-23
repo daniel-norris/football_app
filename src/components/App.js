@@ -8,6 +8,7 @@ import {
 
 import Landing from './Landing/Landing';
 import Players from './Players/index';
+import Teams from './Teams/Teams';
 
 import history from '../history';
 
@@ -22,11 +23,18 @@ const App = () => {
                     </div>
                 </Route>
 
+                <Route exact path="/teams">
+                    <div className="container">
+                        <Teams />
+                    </div>
+                </Route>
+
                 <Route exact path="/players">
                     <div className="container">
                         <Players />
                     </div>
                 </Route>
+
 
             <p>404. No page found.</p>
 

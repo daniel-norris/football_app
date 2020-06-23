@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Roster from '../Roster/Roster';
+import { Link } from 'react-router-dom';
+
 
 class Players extends Component {
     constructor(props) {
@@ -109,8 +111,12 @@ class Players extends Component {
                                 <option value="forward">Forward</option>
                             </select>
 
-                        <button>Confirm</button>
+                        <button>Create</button>
                         </form>
+
+                        <Link to="/teams">
+                            <button className="btn">Confirm</button>
+                        </Link>
 
                     </section>
 

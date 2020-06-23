@@ -8,6 +8,7 @@ const Roster = ({ players }) => (
                 players.map((player, index) => (
                     <li key={ index }>
                         <div className="flex">
+                            <p>#{ index + 1 }</p>
                             <section>
                                 <p>Name: { player.first } { player.last }</p>
                                 <p>Age: { player.age }</p>
