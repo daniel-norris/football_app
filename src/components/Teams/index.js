@@ -1,6 +1,8 @@
 import { connect } from 'react-redux';
 import { postTeams } from '../../data/actions/api';
 
+// adding programmatic navigation after http request below
+import history from '../../history';
 
 import Teams from './Teams';
 
@@ -12,7 +14,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleCreateTeams: data => dispatch(postTeams(data)),
+            handleCreateTeams: data => { dispatch(postTeams(data));
+            history.push("/players")
+        },
     };
 };
 

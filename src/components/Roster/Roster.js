@@ -7,19 +7,15 @@ const Roster = ({ players }) => (
             { players.length === 0 ? <p>No players created... </p> : (
                 players.map((player, index) => (
                     <li key={ index }>
-                        <div className="flex">
+                        <section className="flex column">
                             <p>#{ index + 1 }</p>
-                            <section>
-                                <p>Name: { player.first } { player.last }</p>
-                                <p>Age: { player.age }</p>
-                            </section>
-                            <section>
-                                <p>{ player.position }</p>
-                                <p>Skill: { player.skill }
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </p>
-                            </section>
-                        </div>
+                            <p>Name: { player.first } { player.last }</p>
+                            <p>Age: { player.age }</p>
+                            <p>{ player.position }</p>
+                            <p>Skill: { player.skill }
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </p>
+                        </section>
                     </li>
                 ))
             )}
