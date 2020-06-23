@@ -39,6 +39,8 @@ class Players extends Component {
 
     render() {
 
+        const { players } = this.props;
+
         return (
             <>
                 <main className="flex">
@@ -114,7 +116,19 @@ class Players extends Component {
                     <section>
                         <h1>Player Roster</h1>
                         <ul>
-                            <li></li>
+                            { !players ? <p>No players created... </p> : (
+                                players.map((player, index) => (
+                                    <li key={ index }>
+                                        <p>{ player.first }</p>
+                                        <p>{ player.last }</p>
+                                        <p>{ player.age }</p>
+                                        <p>{ player.skill }
+                                            <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                                        </p>
+                                        <p>{ player.position }</p>
+                                    </li>
+                                ))
+                            )}
                         </ul>
                     </section>
 

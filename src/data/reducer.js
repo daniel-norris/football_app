@@ -1,7 +1,10 @@
 
 const createPlayers = (state, { players }) => ({
     ...state,
-    players: players,
+    players: [
+        ...state.players,
+        players
+    ],
 })
 
 const reducer = (state, action) => {
