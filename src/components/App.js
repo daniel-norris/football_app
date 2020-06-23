@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import Landing from './Landing/Landing';
+import Players from './Players/index';
 
 import history from '../history';
 
@@ -21,9 +22,9 @@ const App = () => {
                     </div>
                 </Route>
 
-                <Route exact path="/teams">
+                <Route exact path="/players">
                     <div className="container">
-
+                        <Players />
                     </div>
                 </Route>
 

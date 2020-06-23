@@ -28,7 +28,7 @@ const Landing = () => (
             </div>
         </section>
         <div className="flex justify-center">
-            <Link to="/teams">
+            <Link to="/players">
                 <button className="btn">Start</button>
             </Link>
         </div>

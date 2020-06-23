@@ -1,11 +1,12 @@
 
-const loadTeams = () => {
-    console.log("teams");
-}
+const createPlayers = (state, { players }) => ({
+    ...state,
+    players: players,
+})
 
 const reducer = (state, action) => {
     switch (action.type) {
-        case "FIND_TEAMS": return loadTeams(state, action)
+        case "CREATE_PLAYERS": return createPlayers(state, action)
         default: return state;
     }
 }
