@@ -35,7 +35,6 @@ const App = () => {
                     </div>
                 </Route>
 
-
             <p>404. No page found.</p>
 
             </Switch>
