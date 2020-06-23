@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Roster from '../Roster/Roster';
 
 class Players extends Component {
     constructor(props) {
@@ -113,24 +114,7 @@ class Players extends Component {
 
                     </section>
 
-                    <section>
-                        <h1>Player Roster</h1>
-                        <ul>
-                            { !players ? <p>No players created... </p> : (
-                                players.map((player, index) => (
-                                    <li key={ index }>
-                                        <p>{ player.first }</p>
-                                        <p>{ player.last }</p>
-                                        <p>{ player.age }</p>
-                                        <p>{ player.skill }
-                                            <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                        </p>
-                                        <p>{ player.position }</p>
-                                    </li>
-                                ))
-                            )}
-                        </ul>
-                    </section>
+                    <Roster players={ players }/>
 
                 </main>
             </>
