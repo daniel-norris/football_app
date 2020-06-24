@@ -1,6 +1,7 @@
 import reducer, {
     createPlayer,
     createTeams,
+    randomiseTeams,
 } from './reducer';
 import initial from './initial';
 
@@ -12,6 +13,7 @@ const initialState = {
 it('creates a player', () => {
     // create player creation tests here
 
+    // checks that players are randomly allocated team A or B
     const randomlyAllocatedTeam = expect.stringMatching(/^[AB]/);
 
     let result = createPlayer(initialState, {
@@ -61,6 +63,8 @@ it('creates two teams', () => {
 
 it('randomly assigns a team to each player', () => {
     // create random team allocation tests here
+
+    let result = createTeams(initialState, { teams: { team_1: { name: "Squad Uno" } }});
 
 });
 

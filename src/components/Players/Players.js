@@ -126,7 +126,7 @@ class Players extends Component {
                 </main>
 
                 <Link to="/randomise">
-                    <button  className="btn">Randomise</button>
+                    <button onClick={ (e) => this.handleClick(e)} className="btn">Randomise</button>
                 </Link>
             </>
         )
