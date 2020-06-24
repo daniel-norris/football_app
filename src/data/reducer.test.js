@@ -13,9 +13,6 @@ const initialState = {
 it('creates a player', () => {
     // create player creation tests here
 
-    // checks that players are randomly allocated team A or B
-    const randomlyAllocatedTeam = expect.stringMatching(/^[AB]/);
-
     let result = createPlayer(initialState, {
         first: "James",
         last: "Smith",
@@ -23,17 +20,16 @@ it('creates a player', () => {
         position: "Forward"
     });
 
-    expect(result.players[0]).toEqual({ first: "James", last: "Smith", age: 25, position: "Forward", side: randomlyAllocatedTeam });
+    expect(result.players[0]).toEqual({ first: "James", last: "Smith", age: 25, position: "Forward" });
     expect(result.players).not.toBe(initialState.players);
 
-    result = createPlayer(result, { first: "Jimmy", last: "Hendrix", age: 29, position: "Forward", side: randomlyAllocatedTeam })
+    result = createPlayer(result, { first: "Jimmy", last: "Hendrix", age: 29, position: "Forward" })
 
     expect(result.players[0]).toEqual({
         first: "James",
         last: "Smith",
         age: 25,
         position: "Forward",
-        side: randomlyAllocatedTeam
     });
 
     expect(result.players[1]).toEqual({
@@ -41,7 +37,6 @@ it('creates a player', () => {
         last: "Hendrix",
         age: 29,
         position: "Forward",
-        side: randomlyAllocatedTeam
     });
 
 });
