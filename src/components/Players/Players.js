@@ -43,6 +43,7 @@ class Players extends Component {
 
     handleClick() {
         this.props.handleRandomise();
+        this.props.handlePlayerUpload();
     }
 
     render() {

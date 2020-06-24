@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { postPlayers } from '../../data/actions/api';
+import { getGame } from '../../data/actions/api';
 
 import Randomise from './Randomise';
 
@@ -11,7 +11,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handlePlayerLoad: () => dispatch(postPlayers()),
+
+        handleGameUpdate: () => dispatch(getGame()),
     }
 };
 

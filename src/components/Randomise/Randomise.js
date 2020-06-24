@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Randomise extends Component {
 
     componentDidMount() {
-        this.props.handlePlayerLoad();
+        this.props.handleGameUpdate();
     }
 
     render() {

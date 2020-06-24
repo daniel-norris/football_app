@@ -17,6 +17,13 @@ export const createTeams = (data) => {
     };
 };
 
+export const updateGame = (data) => {
+    return {
+        type: "UPDATE_GAME",
+        game: data
+    };
+};
+
 export const randomiseTeams = () => {
 
     return (dispatch, getState) => {
