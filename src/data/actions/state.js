@@ -1,7 +1,11 @@
-export const createPlayer = (data) => {
+export const createPlayer = ({ first, last, age, skill, position }) => {
     return {
         type: "CREATE_PLAYER",
-        player: data
+        first: first,
+        last: last,
+        age: age,
+        skill: skill,
+        position: position,
     };
 };
 

@@ -1,7 +1,6 @@
 import reducer, {
     createPlayer,
     createTeams,
-    randomiseTeams,
 } from './reducer';
 import initial from './initial';
 
@@ -13,15 +12,35 @@ const initialState = {
 it('creates a player', () => {
     // create player creation tests here
 
-    let result = createPlayer(initialState, { player: { first: "James" } });
+    const randomlyAllocatedTeam = expect.stringMatching(/^[AB]/);
 
-    expect(result.players[0]).toEqual({ first: "James" });
+    let result = createPlayer(initialState, {
+        first: "James",
+        last: "Smith",
+        age: 25,
+        position: "Forward"
+    });
+
+    expect(result.players[0]).toEqual({ first: "James", last: "Smith", age: 25, position: "Forward", side: randomlyAllocatedTeam });
     expect(result.players).not.toBe(initialState.players);
 
-    result = createPlayer(result, { player: { first: "Jess"} })
+    result = createPlayer(result, { first: "Jimmy", last: "Hendrix", age: 29, position: "Forward", side: randomlyAllocatedTeam })
 
-    expect(result.players[0]).toEqual({ first: "James" });
-    expect(result.players[1]).toEqual({ first: "Jess" });
+    expect(result.players[0]).toEqual({
+        first: "James",
+        last: "Smith",
+        age: 25,
+        position: "Forward",
+        side: randomlyAllocatedTeam
+    });
+
+    expect(result.players[1]).toEqual({
+        first: "Jimmy",
+        last: "Hendrix",
+        age: 29,
+        position: "Forward",
+        side: randomlyAllocatedTeam
+    });
 
 });
 
@@ -41,10 +60,32 @@ it('creates two teams', () => {
 
 
 it('randomly assigns a team to each player', () => {
-    // create player tests here
+    // create random team allocation tests here
 
 });
 
 it('reduces', () => {
     // reducer tests here
 });
+
+
+
+
+
+
+
+
+
+
+// players = [
+//     { first: "Alex", last: "Honnold", age: 26, height: 175, skill: 5, position: "Forward" },
+//     { first: "Adam", last: "Ondra", age: 25, height: 189, skill: 5, position: "Forward" },
+//     { first: "Lynn", last: "Hill", age: 41, height: 165, skill: 5, position: "Forward" },
+//     { first: "Tommy", last: "Caldwell", age: 34, height: 175, skill: 5, position: "Forward" },
+//     { first: "Jimmy", last: "Chin", age: 38, height: 185, skill: 4, position: "Midfielder" },
+//     { first: "Catherine", last: "Destivelle", age: 37, height: 155, skill: 5, position: "Forward" },
+//     { first: "Dean", last: "Potter", age: 32, height: 165, skill: 4, position: "Midfielder" },
+//     { first: "Chris", last: "Bonnington", age: 81, height: 165, skill: 5, position: "Goalkeeper" },
+//     { first: "Conrad", last: "Anker", age: 51, height: 175, skill: 5, position: "Goalkeeper" },
+//     { first: "Nirmal", last: "Purja", age: 26, height: 175, skill: 5, position: "Forward" },
+// ]
