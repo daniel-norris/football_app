@@ -1,7 +1,7 @@
-export const createPlayers = (data) => {
+export const createPlayer = (data) => {
     return {
-        type: "CREATE_PLAYERS",
-        players: data
+        type: "CREATE_PLAYER",
+        player: data
     };
 };
 
