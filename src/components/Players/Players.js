@@ -13,6 +13,7 @@ class Players extends Component {
         this.handleAgeChange = this.handleAgeChange.bind(this);
         this.handleSkillChange = this.handleSkillChange.bind(this);
         this.handlePositionChange = this.handlePositionChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleFirstNameChange(e) {
@@ -40,8 +41,7 @@ class Players extends Component {
         this.props.handleCreatePlayer(this.state);
     }
 
-    handleClick(e) {
-        e.preventDefault();
+    handleClick() {
         this.props.handleRandomise();
     }
 
@@ -126,7 +126,7 @@ class Players extends Component {
                 </main>
 
                 <Link to="/randomise">
-                    <button onClick={ (e) => this.handleClick(e)} className="btn">Randomise</button>
+                    <button onClick={ this.handleClick } className="btn">Randomise</button>
                 </Link>
             </>
         )

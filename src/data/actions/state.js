@@ -1,3 +1,4 @@
+
 export const createPlayer = ({ first, last, age, skill, position }) => {
     return {
         type: "CREATE_PLAYER",
@@ -59,7 +60,9 @@ export const randomiseTeams = () => {
             type: "RANDOMISE_TEAMS",
             team1: team1,
             team2: team2,
-        })
+        });
+
+
 
     }
 }

@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { postPlayers } from '../../data/actions/api';
 
 import Randomise from './Randomise';
 
@@ -8,6 +9,13 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(mapStateToProps)(Randomise);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handlePlayerLoad: () => dispatch(postPlayers()),
+    }
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Randomise);
 
 
