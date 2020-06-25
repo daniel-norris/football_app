@@ -8,36 +8,63 @@ class Randomise extends Component {
 
     render() {
 
-        const { players } = this.props;
+        const { players, games } = this.props;
 
         return(
             <>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Age</th>
-                            <th>Height</th>
-                            <th>Skill</th>
-                            <th>Position</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        { players.length === 0 ? <tr><td>No players to display</td></tr> : (
-                            players.map((player, index) => (
-                                <tr key={ index }>
-                                    <td>{ player.first }</td>
-                                    <td>{ player.last }</td>
-                                    <td>{ player.age }</td>
-                                    <td></td>
-                                    <td>{ player.skill }</td>
-                                    <td>{ player.position }</td>
-                                </tr>
-                            ))
-                        )}
-                    </tbody>
-                </table>
+                <div>
+                    <h1 className="display-5 players__title"></h1>
+                    <table className="randomise__table">
+                        <thead className="randomise__table-header">
+                            <tr className="b-text-3">
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Skill</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody className="randomise__table-body">
+                            { players.length === 0 ? <tr><td>No players to display</td></tr> : (
+                                players.map((player, index) => (
+                                    <tr key={ index }>
+                                        <td>{ player.first }</td>
+                                        <td>{ player.last }</td>
+                                        <td>{ player.age }</td>
+                                        <td>{ player.skill }</td>
+                                        <td>{ player.position }</td>
+                                    </tr>
+                                ))
+                            )}
+                        </tbody>
+                    </table>
+
+                    <h1 className="display-5 players__title">Team 2</h1>
+                    <table className="randomise__table">
+                        <thead className="randomise__table-header">
+                            <tr className="b-text-3">
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Skill</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody className="randomise__table-body">
+                            { players.length === 0 ? <tr><td>No players to display</td></tr> : (
+                                players.map((player, index) => (
+                                    <tr key={ index }>
+                                        <td>{ player.first }</td>
+                                        <td>{ player.last }</td>
+                                        <td>{ player.age }</td>
+                                        <td>{ player.skill }</td>
+                                        <td>{ player.position }</td>
+                                    </tr>
+                                ))
+                            )}
+                        </tbody>
+                    </table>
+                </div>
             </>
         )
     }

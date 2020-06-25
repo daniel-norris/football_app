@@ -139,7 +139,7 @@ class Players extends Component {
 
                     {/* <Roster players={ players }/> */}
 
-                    <Link to="/randomise">
+                    <Link to="/draft/players/view">
                         <button onClick={ this.handleClick } className="btn">Randomise</button>
                     </Link>
 

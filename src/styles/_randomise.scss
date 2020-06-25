@@ -1,0 +1,20 @@
+.randomise {
+    &__table-header {
+        background: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    &__table-body {
+
+        tr {
+            background: blue;
+        }
+
+        tr:nth-child(odd) {
+            background: $secondaryColor;
+        }
+
+        tr:nth-child(even) {
+            background: $primaryColor;
+        }
+    }
+}
