@@ -1,20 +1,43 @@
 .randomise {
+
+    &__title {
+        margin-bottom: .5rem;
+    }
+
     &__table-header {
         background: rgba($color: #000000, $alpha: 0.3);
+
+        th {
+            padding: .4rem;
+        }
     }
 
     &__table-body {
+        font-family: $font;
+        color: $white;
+        text-align: center;
 
+        // support for <= ie8
         tr {
-            background: blue;
+            background: $secondaryColor;
         }
 
+        td {
+            padding: .4rem;
+        }
+
+        // zebra striping tables depending on row count
         tr:nth-child(odd) {
-            background: $secondaryColor;
+            background: rgba($color: #ffffff, $alpha: 0.2);
         }
 
         tr:nth-child(even) {
             background: $primaryColor;
+        }
+
+        // highlighting rows on hover
+        tr:hover {
+            background: $tertiaryColor;
         }
     }
 }

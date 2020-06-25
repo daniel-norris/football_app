@@ -8,12 +8,12 @@ class Randomise extends Component {
 
     render() {
 
-        const { players, games } = this.props;
+        const { team1, team2 } = this.props;
 
         return(
             <>
                 <div>
-                    <h1 className="display-5 players__title"></h1>
+                    <h1 className="display-5 randomise__title">Team 1</h1>
                     <table className="randomise__table">
                         <thead className="randomise__table-header">
                             <tr className="b-text-3">
@@ -25,8 +25,8 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { players.length === 0 ? <tr><td>No players to display</td></tr> : (
-                                players.map((player, index) => (
+                            { team1.length === 0 ? <tr><td>No players to display</td></tr> : (
+                                team1.map((player, index) => (
                                     <tr key={ index }>
                                         <td>{ player.first }</td>
                                         <td>{ player.last }</td>
@@ -39,7 +39,7 @@ class Randomise extends Component {
                         </tbody>
                     </table>
 
-                    <h1 className="display-5 players__title">Team 2</h1>
+                    <h1 className="display-5 randomise__title">Team 2</h1>
                     <table className="randomise__table">
                         <thead className="randomise__table-header">
                             <tr className="b-text-3">
@@ -51,8 +51,8 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { players.length === 0 ? <tr><td>No players to display</td></tr> : (
-                                players.map((player, index) => (
+                            { team2.length === 0 ? <tr><td>No players to display</td></tr> : (
+                                team2.map((player, index) => (
                                     <tr key={ index }>
                                         <td>{ player.first }</td>
                                         <td>{ player.last }</td>

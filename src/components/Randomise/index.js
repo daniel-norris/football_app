@@ -5,8 +5,8 @@ import Randomise from './Randomise';
 
 const mapStateToProps = state => {
     return {
-        players: state.players,
-        games: state.games,
+        team1: state.team1,
+        team2: state.team2,
     };
 };
 
