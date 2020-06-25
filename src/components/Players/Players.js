@@ -120,13 +120,15 @@ class Players extends Component {
                         </div>
                     </div>
 
-                    <label className="b-text-3" htmlFor="position">Position</label>
-                    <select name="position" id="position" onChange={ (e) => this.handlePositionChange(e) }>
-                        <option value="">Player position...</option>
-                        <option value="goalkeeper">Goalkeeper</option>
-                        <option value="midfielder">Midfielder</option>
-                        <option value="forward">Forward</option>
-                    </select>
+                    <div className="players__position">
+                        <label className="b-text-3" htmlFor="position">Position</label>
+                        <select name="position" id="position" onChange={ (e) => this.handlePositionChange(e) }>
+                            <option value="">Player position...</option>
+                            <option value="goalkeeper">Goalkeeper</option>
+                            <option value="midfielder">Midfielder</option>
+                            <option value="forward">Forward</option>
+                        </select>
+                    </div>
 
                     <div>
                         <button className="players__create">
