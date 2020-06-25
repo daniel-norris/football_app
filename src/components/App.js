@@ -26,13 +26,20 @@ const App = () => {
 
                 <Switch>
                     <Route exact path="/">
-                        <img className="field__landing" alt="" src={require("../assets/images/SVG/pitch2-side.svg")}/>
+                        <div className="field__landing">
+                            <div className="player__marker1">P1</div>
+                            <div className="player__marker2">P2</div>
+                            <div className="player__marker3">P3</div>
+                            <div className="player__marker4">P4</div>
+                            <div className="player__marker5">P5</div>
+                            <div className="player__marker6">P6</div>
+                        </div>
                         <Landing />
                     </Route>
 
                     <Route exact path="/teams">
                         <Teams />
-                        <img alt="" src={require("../assets/images/SVG/pitch2.svg")}/>
+                        <img alt="" src={require("../assets/images/SVG/pitch2.svg")} />
                     </Route>
 
                     <Route exact path="/players">
