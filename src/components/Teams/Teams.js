@@ -30,53 +30,65 @@ class Teams extends Component {
 
     render() {
 
+        const { teams } = this.props;
+
         return(
             <>
-                <form className="flex">
+                <form>
 
-                    <div>
-                        <label htmlFor="squad1">Squad 1</label>
-                        <input
-                            onChange={ (e) => this.handleSquad1NameChange(e) }
-                            type="text"
-                            id="squad1"
-                            name="squad1"></input>
+                    <h1 className="teams__title display-5">Create your teams</h1>
 
-                        <div>
+                    <label className="b-text-3" htmlFor="squad1">Squad 1</label>
+                    <input
+                        onChange={ (e) => this.handleSquad1NameChange(e) }
+                        type="text"
+                        id="squad1"
+                        name="squad1"
+                        placeholder="Enter squad name..."></input>
+
+                    <div className="teams__kit">
+                        <div className="flex column align-center">
                             <label htmlFor="kit1">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
                             <input type="radio" id="kit1" name="kit" value="1"/>
+                        </div>
+                        <div className="flex column align-center">
                             <label htmlFor="kit2">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
                             <input type="radio" id="kit2" name="kit" value="2"/>
+                        </div>
+                        <div className="flex column align-center">
                             <label htmlFor="kit3">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
                             <input type="radio" id="kit3" name="kit" value="3"/>
                         </div>
-
                     </div>
 
-                    <div>
+                    <label className="b-text-3" htmlFor="squad2">Squad 2</label>
+                    <input
+                        onChange={ (e) => this.handleSquad2NameChange(e) }
+                        type="text"
+                        id="squad2"
+                        name="squad2"
+                        placeholder="Enter squad name..."></input>
 
-                        <label htmlFor="squad2">Squad 2</label>
-                        <input
-                            onChange={ (e) => this.handleSquad2NameChange(e) }
-                            type="text"
-                            id="squad2"
-                            name="squad2"></input>
-
-                        <div>
+                    <div className="teams__kit">
+                        <div className="flex column align-center">
                             <label htmlFor="t2kit1">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
                             <input type="radio" id="t2kit1" name="kit" value="1"/>
+                        </div>
+                        <div className="flex column align-center">
                             <label htmlFor="t2kit2">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
                             <input type="radio" id="t2kit2" name="kit" value="2"/>
+                        </div>
+                        <div className="flex column align-center">
                             <label htmlFor="t2kit3">
                                 <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
                             </label>
@@ -84,17 +96,21 @@ class Teams extends Component {
                         </div>
                     </div>
 
+                    <section className="flex column">
+                        <label className="b-text-3">Players per side</label>
+                        <input
+                            onChange={ (e) => this.handlePlayersPerSideChange(e) }
+                            type="number"
+                            placeholder="Choose team size..."></input>
+
+                        <div>
+                            <button
+                                onClick={ (e) => this.handleSquadSubmit(e) }
+                                className="btn teams__btn">Confirm
+                            </button>
+                        </div>
+                    </section>
                 </form>
-
-                <section className="flex column">
-                    <label>Players per side</label>
-                    <input onChange={ (e) => this.handlePlayersPerSideChange(e) } type="number" placeholder="5"></input>
-
-                    <Link to="/players">
-                        <button onClick={ (e) => this.handleSquadSubmit(e) } className="btn">Confirm</button>
-                    </Link>
-                </section>
-
             </>
         )
     }

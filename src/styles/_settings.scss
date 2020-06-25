@@ -63,6 +63,9 @@ body {
     background-color: $primaryColor;
 }
 
+a {
+    text-decoration: none;
+}
 
 .flex {
     display: flex;
@@ -76,13 +79,18 @@ body {
     justify-content: center;
 }
 
+.align-center {
+    align-items: center;
+}
+
 .container {
     // margin: 0 auto;
     // position: relative;
 
-    // full viewport height minus the header and footer
-    min-height: calc(100vh - 7rem);
+    // full viewport height minus and footer
+    min-height: calc(100vh - 5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+

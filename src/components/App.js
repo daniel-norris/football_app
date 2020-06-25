@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+    Link,
     Router,
     Route,
     Switch
@@ -19,7 +20,9 @@ const App = () => {
         <Router history={history}>
 
             <header className="header">
-                <h1 className="logo">Foo Draft</h1>
+                <Link to="/">
+                    <h1 className="logo">Foo Draft</h1>
+                </Link>
             </header>
 
             <div className="container">
@@ -27,23 +30,42 @@ const App = () => {
                 <Switch>
                     <Route exact path="/">
                         <div className="field__landing">
-                            <div className="player__marker1">P1</div>
-                            <div className="player__marker2">P2</div>
-                            <div className="player__marker3">P3</div>
-                            <div className="player__marker4">P4</div>
-                            <div className="player__marker5">P5</div>
-                            <div className="player__marker6">P6</div>
+                            <div className="demo__marker1">P1</div>
+                            <div className="demo__marker2">P2</div>
+                            <div className="demo__marker3">P3</div>
+                            <div className="demo__marker4">P4</div>
+                            <div className="demo__marker5">P5</div>
+                            <div className="demo__marker6">P6</div>
                         </div>
                         <Landing />
                     </Route>
 
-                    <Route exact path="/teams">
-                        <Teams />
-                        <img alt="" src={require("../assets/images/SVG/pitch2.svg")} />
+                    <Route exact path="/draft">
+                        <div className="teams__container">
+                            <Teams/>
+                            <div className="field__teams">
+                                {/* <div className="player__marker1">P1</div>
+                                <div className="player__marker2">P2</div>
+                                <div className="player__marker3">P3</div>
+                                <div className="player__marker4">P4</div>
+                                <div className="player__marker5">P5</div>
+                                <div className="player__marker6">P6</div> */}
+                            </div>
+                        </div>
                     </Route>
 
-                    <Route exact path="/players">
-                        <Players />
+                    <Route exact path="/draft/players">
+                        <div className="teams__container">
+                            <Players/>
+                            <div className="field__teams">
+                                <div className="player__marker1">P1</div>
+                                <div className="player__marker2">P2</div>
+                                <div className="player__marker3">P3</div>
+                                <div className="player__marker4">P4</div>
+                                <div className="player__marker5">P5</div>
+                                <div className="player__marker6">P6</div>
+                            </div>
+                        </div>
                     </Route>
 
                     <Route exact path="/randomise">

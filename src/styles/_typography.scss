@@ -52,6 +52,30 @@
     font-size: 1rem;
 }
 
+/* anything that is not a title and bold weight */
+
+%b-text {
+    font-family: $font;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.b-text-1 {
+    @extend %b-text;
+    font-size: 3rem;
+}
+
+.b-text-2 {
+    @extend %b-text;
+    font-size: 2rem;
+}
+
+.b-text-3 {
+    @extend %b-text;
+    font-size: 1rem;
+}
+
 /* logo */
 
 .logo {

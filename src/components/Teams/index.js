@@ -13,9 +13,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+
+
+
     return {
             handleCreateTeams: data => { dispatch(postTeams(data));
-            history.push("/players")
+            history.push("/draft/players")
         },
     };
 };

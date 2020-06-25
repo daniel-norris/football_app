@@ -9,6 +9,143 @@
     background-size: contain;
 }
 
+
+.demo__marker {
+
+    &1 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 10rem;
+        top: 3rem;
+    }
+
+    &2 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 15rem;
+        top: 3rem;
+    }
+
+    &3 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 16rem;
+        top: -1rem;
+    }
+
+    &4 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 14rem;
+        top: 7rem;
+    }
+
+    &5 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 21rem;
+        top: 1rem;
+    }
+
+    &6 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 20rem;
+        top: 5rem;
+    }
+
+}
+
+.field__teams {
+    position: relative;
+    margin-left: 2rem;
+
+    // scaling svgs as background image
+    width: 45rem;
+    height: 35rem;
+    background: no-repeat center url("../assets/images/SVG/pitch2.svg");
+    background-size: contain;
+
+}
+
 .player__marker {
 
     &1 {
@@ -130,4 +267,5 @@
         left: 20rem;
         top: 5rem;
     }
+
 }

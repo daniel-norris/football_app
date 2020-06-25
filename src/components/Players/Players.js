@@ -52,83 +52,96 @@ class Players extends Component {
 
         return (
             <>
-                <main className="flex">
+                <form
+                    className="players__wrapper"
+                    onSubmit={ (e) => this.handleSubmit(e) }>
 
-                    <section>
-                        <h1>Create your players</h1>
-                        <form
-                            className="flex column"
-                            onSubmit={ (e) => this.handleSubmit(e) }>
+                    <h1 className="display-5 players__title">Create your players</h1>
 
-                            <label>Player first name</label>
-                            <input
-                                onChange={ (e) => this.handleFirstNameChange(e) }
-                                type="text"
-                                placeholder="Enter player first name..."
-                                value={ this.state.first }></input>
+                    <label className="b-text-3">Player first name</label>
+                    <input
+                        onChange={ (e) => this.handleFirstNameChange(e) }
+                        type="text"
+                        placeholder="Player first name..."
+                        value={ this.state.first }></input>
 
-                            <label>Player last name</label>
-                            <input
-                                onChange={ (e) => this.handleLastNameChange(e) }
-                                type="text"
-                                placeholder="Enter player last name..."
-                                value={ this.state.last }></input>
+                    <label className="b-text-3">Player last name</label>
+                    <input
+                        onChange={ (e) => this.handleLastNameChange(e) }
+                        type="text"
+                        placeholder="Player last name..."
+                        value={ this.state.last }></input>
 
-                            <label>Age</label>
-                            <input
-                                onChange={ (e) => this.handleAgeChange(e) }
-                                type="number"
-                                placeholder="Enter player age..."
-                                value={ this.state.age }></input>
+                    <label className="b-text-3">Age</label>
+                    <input
+                        onChange={ (e) => this.handleAgeChange(e) }
+                        type="number"
+                        placeholder="Player age..."
+                        value={ this.state.age }></input>
 
-                            <div className="flex">
-                                <label htmlFor="skill1">1
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </label>
-                                <input type="radio" id="skill1" name="skill" value="1"
-                                    onChange={ (e) => this.handleSkillChange(e) }/>
-                                <label htmlFor="skill2">2
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </label>
-                                <input type="radio" id="skill2" name="skill" value="2"
-                                    onChange={ (e) => this.handleSkillChange(e) }/>
-                                <label htmlFor="skill3">3
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </label>
-                                <input type="radio" id="skill3" name="skill" value="3"
-                                    onChange={ (e) => this.handleSkillChange(e) }/>
-                                <label htmlFor="skill4">4
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </label>
-                                <input type="radio" id="skill4" name="skill" value="4"
-                                    onChange={ (e) => this.handleSkillChange(e) }/>
-                                <label htmlFor="skill5">5
-                                    <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
-                                </label>
-                                <input type="radio" id="skill5" name="skill" value="5"
-                                    onChange={ (e) => this.handleSkillChange(e) }/>
-                            </div>
+                    <p className="b-text-3">Skill</p>
+                    <div className="players__skill">
+                        <div className="flex column">
+                            <label className="b-text-3 flex align-center" htmlFor="skill1">1
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </label>
+                            <input type="radio" id="skill1" name="skill" value="1"
+                                onChange={ (e) => this.handleSkillChange(e) }
+                            />
+                        </div>
+                        <div className="flex column">
+                            <label className="b-text-3 flex align-center" htmlFor="skill2">2
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </label>
+                            <input type="radio" id="skill2" name="skill" value="2"
+                                onChange={ (e) => this.handleSkillChange(e) }
+                            />
+                        </div>
+                        <div className="flex column">
+                            <label className="b-text-3 flex align-center" htmlFor="skill3">3
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </label>
+                            <input type="radio" id="skill3" name="skill" value="3"
+                                onChange={ (e) => this.handleSkillChange(e) }/>
+                        </div>
+                        <div className="flex column">
+                            <label className="b-text-3 flex align-center" htmlFor="skill4">4
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </label>
+                            <input type="radio" id="skill4" name="skill" value="4"
+                                onChange={ (e) => this.handleSkillChange(e) }/>
+                        </div>
+                        <div className="flex column">
+                            <label className="b-text-3 flex align-center" htmlFor="skill5">5
+                                <img className="icon" alt="" src={require("../../assets/icons/star-solid.svg")}/>
+                            </label>
+                            <input type="radio" id="skill5" name="skill" value="5"
+                                onChange={ (e) => this.handleSkillChange(e) }/>
+                        </div>
+                    </div>
 
-                            <label htmlFor="position">Choose a position</label>
-                            <select name="position" id="position" onChange={ (e) => this.handlePositionChange(e) }>
-                                <option value="">-Please choose an option-</option>
-                                <option value="goalkeeper">Goalkeeper</option>
-                                <option value="midfielder">Midfielder</option>
-                                <option value="forward">Forward</option>
-                            </select>
+                    <label className="b-text-3" htmlFor="position">Position</label>
+                    <select name="position" id="position" onChange={ (e) => this.handlePositionChange(e) }>
+                        <option value="">Player position...</option>
+                        <option value="goalkeeper">Goalkeeper</option>
+                        <option value="midfielder">Midfielder</option>
+                        <option value="forward">Forward</option>
+                    </select>
 
-                        <button>Create</button>
-                        </form>
+                    <div>
+                        <button className="players__create">
+                            <img className="icon" alt="" src={require("../../assets/icons/plus-square-solid.svg")}/>
+                            <p className="b-text-3">Create</p>
+                        </button>
+                    </div>
 
-                    </section>
+                    {/* <Roster players={ players }/> */}
 
-                    <Roster players={ players }/>
+                    <Link to="/randomise">
+                        <button onClick={ this.handleClick } className="btn">Randomise</button>
+                    </Link>
 
-                </main>
-
-                <Link to="/randomise">
-                    <button onClick={ this.handleClick } className="btn">Randomise</button>
-                </Link>
+                </form>
             </>
         )
     }
