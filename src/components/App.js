@@ -12,6 +12,7 @@ import Players from './Players/index.js';
 import Teams from './Teams/index.js';
 import Randomise from './Randomise/index.js';
 import Footer from './Footer/Footer';
+import Field from './Field/Field';
 
 import history from '../history';
 
@@ -71,14 +72,7 @@ const App = () => {
                     <Route exact path="/draft/players/view">
                         <div className="teams__container">
                             <Randomise />
-                            <div className="field__teams">
-                                <div className="player__marker1">P1</div>
-                                <div className="player__marker2">P2</div>
-                                <div className="player__marker3">P3</div>
-                                <div className="player__marker4">P4</div>
-                                <div className="player__marker5">P5</div>
-                                <div className="player__marker6">P6</div>
-                            </div>
+                            <Field />
                         </div>
 
                     </Route>

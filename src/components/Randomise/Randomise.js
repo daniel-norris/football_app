@@ -25,7 +25,7 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { team1.length === 0 ? <tr><td>No players to display</td></tr> : (
+                            { team1.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
                                 team1.map((player, index) => (
                                     <tr key={ index }>
                                         <td>{ player.first }</td>
@@ -51,7 +51,7 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { team2.length === 0 ? <tr><td>No players to display</td></tr> : (
+                            { team2.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
                                 team2.map((player, index) => (
                                     <tr key={ index }>
                                         <td>{ player.first }</td>
