@@ -1,5 +1,8 @@
+/* title text */
+
 %display {
     font-family: $displayFont;
+    color: $tertiaryColor;
 }
 
 .display-1 {
@@ -27,8 +30,11 @@
     font-size: 2rem;
 }
 
+/* anything that is not a title */
+
 %text {
     font-family: $font;
+    color: white;
 }
 
 .text-1 {
@@ -44,4 +50,14 @@
 .text-3 {
     @extend %text;
     font-size: 1rem;
+}
+
+/* logo */
+
+.logo {
+    color: $white;
+    font-family: $displayFont;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px 0 black;
 }

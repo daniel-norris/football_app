@@ -1,10 +1,8 @@
 .landing {
-    margin-top: 25vh;
+    background-color: $primaryColor;
 
-}
-
-.landing__feature {
-    padding: 0 4rem;
+    // offsets the hieght of the footer
+    // padding-bottom: 5rem;
 }
 
 .landing__feature > div {

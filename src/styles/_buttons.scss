@@ -1,12 +1,14 @@
 .btn {
     border: none;
-    background-color: #999;
+    background-color: $secondaryColor;
     color: white;
     font-size: 1rem;
     border-radius: 1rem;
-    padding: 1rem 3rem;
+    padding: .5rem 2rem;
+    font-family: $displayFont;
+    text-transform: uppercase;
 
     &:hover {
-        background-color: #666;
+        background-color: $tertiaryColor;
     }
 }

@@ -1,0 +1,27 @@
+.footer {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5rem;
+    padding: 1rem 5rem;
+    box-sizing: border-box;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0 .5rem;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}

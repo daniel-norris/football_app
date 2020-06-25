@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Landing = () => (
-    <header className="landing">
-        <h1 className="display-1">Random Fantasy Football</h1>
+    <main className="landing">
+
         <section className="flex landing__feature">
             <div className="flex">
                 <img className="landing__img" alt="" src={require("../../assets/icons/check-double-solid.svg")}/>
@@ -32,7 +32,7 @@ const Landing = () => (
                 <button className="btn">Start</button>
             </Link>
         </div>
-    </header>
+    </main>
 );
 
 

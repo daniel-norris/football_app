@@ -10,41 +10,47 @@ import Landing from './Landing/Landing';
 import Players from './Players/index.js';
 import Teams from './Teams/index.js';
 import Randomise from './Randomise/index.js';
+import Footer from './Footer/Footer';
 
 import history from '../history';
 
 const App = () => {
     return (
         <Router history={history}>
-            <Switch>
 
-                <Route exact path="/">
-                    <div className="container">
+            <header className="header">
+                <h1 className="logo">Foo Draft</h1>
+            </header>
+
+            <div className="container">
+
+                <Switch>
+                    <Route exact path="/">
+                        <img className="field__landing" alt="" src={require("../assets/images/SVG/pitch2-side.svg")}/>
                         <Landing />
-                    </div>
-                </Route>
+                    </Route>
 
-                <Route exact path="/teams">
-                    <div className="container">
+                    <Route exact path="/teams">
                         <Teams />
-                    </div>
-                </Route>
+                        <img alt="" src={require("../assets/images/SVG/pitch2.svg")}/>
+                    </Route>
 
-                <Route exact path="/players">
-                    <div className="container">
+                    <Route exact path="/players">
                         <Players />
-                    </div>
-                </Route>
+                    </Route>
 
-                <Route exact path="/randomise">
-                    <div className="container">
+                    <Route exact path="/randomise">
                         <Randomise />
-                    </div>
-                </Route>
+                    </Route>
 
-            <p>404. No page found.</p>
+                <p>404. No page found.</p>
 
-            </Switch>
+                </Switch>
+
+                <Footer />
+
+            </div>
+
 
         </Router>
     )

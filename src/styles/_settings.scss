@@ -47,7 +47,22 @@
 $displayFont: "ArchivoBlack", helvetica, sans-serif;
 $font: "SourceSansPro", helvetica, sans-serif;
 
+/* colors */
+
+$primaryColor: #2B7E29;
+$secondaryColor: #1cb320;
+$tertiaryColor: #E2CF02;
+$darkGrey: #666;
+$lightGrey: #999;
+$white: #eee;
+
 /* utility */
+
+body {
+    /* better solution for this */
+    background-color: $primaryColor;
+}
+
 
 .flex {
     display: flex;
@@ -62,6 +77,12 @@ $font: "SourceSansPro", helvetica, sans-serif;
 }
 
 .container {
-    margin: 0 auto;
-    width: 90vw;
+    // margin: 0 auto;
+    // position: relative;
+
+    // full viewport height minus the header and footer
+    min-height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
