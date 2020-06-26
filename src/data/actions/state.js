@@ -32,8 +32,8 @@ export const randomiseTeams = () => {
         const players = [...getState().players]
 
         // assigning the api team ids for the currently created teams to variables
-        const team1Id = getState().games[0].team_1.id
-        const team2Id = getState().games[0].team_2.id
+        const team1Id = getState().game.team_1.id
+        const team2Id = getState().game.team_2.id
 
         // splitting the size of the currently created roster of players by half
         let teamSize = players.length / 2;
