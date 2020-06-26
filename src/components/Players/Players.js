@@ -129,9 +129,9 @@ class Players extends Component {
                         <label className="b-text-3" htmlFor="position">Position</label>
                         <select name="position" id="position" onChange={ (e) => this.handlePositionChange(e) }>
                             <option value="">Player position...</option>
-                            <option value="goalkeeper">Goalkeeper</option>
-                            <option value="midfielder">Midfielder</option>
-                            <option value="forward">Forward</option>
+                            <option value="Goalkeeper">Goalkeeper</option>
+                            <option value="Midfielder">Midfielder</option>
+                            <option value="Forward">Forward</option>
                         </select>
                     </div>
 

@@ -27,10 +27,17 @@
         border-radius: 1rem;
         padding: .5rem 1rem;
         border: 1px solid $tertiaryColor;
+
     }
 
     &__create:hover {
         background: $tertiaryColor;
+
+    }
+
+    // changing the svg plus icon when the parent element is hovered
+    &__create:hover > img {
+        filter: grayscale(100%) sepia(100%);
     }
 
     &__create > img {
