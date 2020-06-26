@@ -24,14 +24,6 @@ export const updateGame = (data) => {
     };
 };
 
-export const updatePlayers = () => {
-    return {
-        type: "UPDATE_PLAYERS",
-        loaded: true,
-    };
-};
-
-
 export const randomiseTeams = () => {
 
     return (dispatch, getState) => {
@@ -76,8 +68,5 @@ export const randomiseTeams = () => {
             team1: team1,
             team2: team2,
         });
-
-
-
     }
 }

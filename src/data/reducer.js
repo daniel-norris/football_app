@@ -2,6 +2,7 @@ export const randomiseTeams = (state, { team1, team2 }) => ({
     ...state,
     team1: team1,
     team2: team2,
+    uploaded: true,
 })
 
 export const createPlayer = (state, { first, last, age, skill, position }) => ({
@@ -28,17 +29,11 @@ export const updateGame = (state, { game }) => ({
     loaded: true,
 })
 
-export const updatePlayers = (state, { loaded }) => ({
-    ...state,
-    loaded: true
-})
-
 export const reducer = (state, action) => {
     switch (action.type) {
         case "CREATE_PLAYER": return createPlayer(state, action);
         case "CREATE_TEAMS": return createTeams(state, action);
         case "UPDATE_GAME": return updateGame(state, action);
-        case "UPDATE_PLAYERS": return updatePlayers(state, action);
         case "RANDOMISE_TEAMS": return randomiseTeams(state, action);
         default: return state;
     }

@@ -11,6 +11,7 @@ const mapStateToProps = state => {
     return {
         players: state.players,
         game: state.game,
+        uploaded: state.uploaded,
     };
 };
 
@@ -19,8 +20,10 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleCreatePlayer: data => dispatch(createPlayer(data)),
         handlePlayerUpload: () => dispatch(postPlayers()),
-        handleRandomise: data => { dispatch(randomiseTeams());
-            history.push(`/draft/players/${data.id}/view`); }
+        handleRandomise: (data, uploaded) => { dispatch(randomiseTeams());
+            if(uploaded) {
+                history.push(`/draft/players/${data.id}/view`); }
+            }
     };
 };
 
