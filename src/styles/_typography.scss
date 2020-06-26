@@ -88,3 +88,22 @@
         color: $tertiaryColor;
     }
 }
+
+/* validation errors */
+
+%error {
+    font-family: $font;
+    font-weight: 400;
+    color: $tertiaryColor;
+    margin-bottom: .5rem;
+}
+
+.error-3 {
+    @extend %error;
+    font-size: .8rem;
+}
+
+.hidden {
+    @extend %error;
+    visibility: hidden;
+}

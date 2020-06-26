@@ -31,7 +31,7 @@ class Teams extends Component {
     render() {
 
         const { teams } = this.props;
-        const { players_side } = this.state;
+        const { players_side, team_1, team_2 } = this.state;
 
         return(
             <>
@@ -47,6 +47,7 @@ class Teams extends Component {
                         name="squad1"
                         placeholder="Enter squad name...">
                     </input>
+                    { team_1 ? <p className="hidden">error</p> : <p className="error-3">Enter a team name for Squad 1.</p> }
 
                     <label className="b-text-3" htmlFor="squad2">Squad 2</label>
                     <input
@@ -56,6 +57,7 @@ class Teams extends Component {
                         name="squad2"
                         placeholder="Enter squad name...">
                     </input>
+                    { team_2 ? <p className="hidden">error</p> : <p className="error-3">Enter a team name for Squad 2.</p> }
 
                     <section className="flex column">
                         <label className="b-text-3">Players per side</label>
@@ -64,6 +66,8 @@ class Teams extends Component {
                             type="number"
                             placeholder="Choose team size...">
                         </input>
+                        { players_side > 9 || players_side == 0 ? <p className="error-3">Enter a team size of between 1 - 9 players.</p> : <p className="hidden">error</p> }
+
 
                         <div>
                             <button
