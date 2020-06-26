@@ -52,7 +52,7 @@ class Players extends Component {
 
     render() {
 
-        const { players, game } = this.props;
+        const { players, game, uploaded } = this.props;
         const { first, last, age, skill, position } = this.state;
 
         return (
@@ -155,7 +155,7 @@ class Players extends Component {
                     </div>
 
                     <div>
-                        <button onClick={ (e) => this.handleRandomise(e) } className="btn">Randomise</button>
+                        <button onClick={ (e) => this.handleRandomise(e) } className="btn">{ !uploaded ? "Confirm" : "Randomise" }</button>
                     </div>
 
 
