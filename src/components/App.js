@@ -13,6 +13,7 @@ import Teams from './Teams/index.js';
 import Randomise from './Randomise/index.js';
 import Footer from './Footer/Footer';
 import Field from './Field/index.js';
+import Demo from './Demo/Demo';
 
 import history from '../history';
 
@@ -30,31 +31,32 @@ const App = () => {
 
                 <Switch>
                     <Route exact path="/">
-                        <div className="field__landing">
-                            <div className="demo__marker1">P1</div>
-                            <div className="demo__marker2">P2</div>
-                            <div className="demo__marker3">P3</div>
-                            <div className="demo__marker4">P4</div>
-                            <div className="demo__marker5">P5</div>
-                            <div className="demo__marker6">P6</div>
+                        <div className="content-wrap">
+                            <Demo/>
+                            <Landing />
                         </div>
-                        <Landing />
                     </Route>
 
                     <Route exact path="/draft">
-                        <Teams/>
+                        <div className="content-wrap">
+                            <Teams/>
+                        </div>
                     </Route>
 
                     <Route exact path="/draft/players">
-                        <div className="teams__container">
-                            <Players/>
+                        <div className="content-wrap">
+                            <div className="teams__container">
+                                <Players/>
+                            </div>
                         </div>
                     </Route>
 
                     <Route exact path="/draft/players/:id/view" render={({ match }) => (
-                        <div className="randomise__container">
-                            <Field/>
-                            <Randomise id={match.params.id}/>
+                        <div className="content-wrap">
+                            <div className="randomise__container">
+                                <Field/>
+                                <Randomise id={match.params.id}/>
+                            </div>
                         </div>
                     )}>
                     </Route>
