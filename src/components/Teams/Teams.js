@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Teams extends Component {
     constructor(props) {
         super(props);
-        this.state = { team_1: "", team_2: "", players_side: 6 };
+        this.state = { team_1: "", team_2: "", players_side: 0 };
         this.handleSquadSubmit = this.handleSquadSubmit.bind(this);
         this.handleSquad1NameChange = this.handleSquad1NameChange.bind(this);
         this.handleSquad2NameChange = this.handleSquad2NameChange.bind(this);
@@ -13,7 +13,12 @@ class Teams extends Component {
 
     handleSquadSubmit(e) {
         e.preventDefault();
-        this.props.handleCreateTeams(this.state);
+        const { team_1, team_2, players_side } = this.state;
+
+        // validate that fields are completed
+        if(team_1 && team_2 && players_side) {
+            this.props.handleCreateTeams(this.state);
+        }
     }
 
     handleSquad1NameChange(e) {
