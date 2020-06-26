@@ -266,7 +266,7 @@
         position: relative;
 
         // scaling svgs as background image
-        width: 45rem;
+        width: 40rem;
         height: 15rem;
         background: no-repeat center url("../assets/images/SVG/pitch2-side.svg");
         background-size: contain;
@@ -293,7 +293,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 10rem;
+            left: 7rem;
             top: 3rem;
         }
 
@@ -301,7 +301,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 15rem;
+            left: 12rem;
             top: 3rem;
         }
 
@@ -309,7 +309,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 16rem;
+            left: 13rem;
             top: -1rem;
         }
 
@@ -317,7 +317,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 14rem;
+            left: 11rem;
             top: 7rem;
         }
 
@@ -325,7 +325,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 21rem;
+            left: 18rem;
             top: 1rem;
         }
 
@@ -333,7 +333,7 @@
             @extend %demo-650;
             // position on field
             position: absolute;
-            left: 20rem;
+            left: 17rem;
             top: 5rem;
         }
 
