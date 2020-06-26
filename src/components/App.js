@@ -42,9 +42,7 @@ const App = () => {
                     </Route>
 
                     <Route exact path="/draft">
-                        <div className="teams__container">
-                            <Teams/>
-                        </div>
+                        <Teams/>
                     </Route>
 
                     <Route exact path="/draft/players">

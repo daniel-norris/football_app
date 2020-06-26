@@ -39,7 +39,7 @@ class Teams extends Component {
         const { players_side, team_1, team_2 } = this.state;
 
         return(
-            <>
+            <div className="teams__container">
                 <form>
 
                     <h1 className="teams__title display-5">Create your teams</h1>
@@ -93,7 +93,7 @@ class Teams extends Component {
                         )) : null
                     }
                 </div>
-            </>
+            </div>
         )
     }
 }
