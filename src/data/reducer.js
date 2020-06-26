@@ -19,10 +19,7 @@ export const createPlayer = (state, { first, last, age, skill, position }) => ({
 
 export const createTeams = (state, { teams }) => ({
     ...state,
-    games: [
-        ...state.games,
-        teams
-    ],
+    game: teams
 })
 
 export const updateGame = (state, { game }) => ({
