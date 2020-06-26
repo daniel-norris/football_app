@@ -42,7 +42,8 @@ class Players extends Component {
         }
     }
 
-    handleRandomise() {
+    handleRandomise(e) {
+        e.preventDefault();
         const { players, game } = this.props;
         if(players.length === game.players_per_side * 2) {
             this.props.handleRandomise();
@@ -58,7 +59,7 @@ class Players extends Component {
             <>
                 <form
                     className="players__wrapper"
-                    onSubmit={ (e) => this.handleCreatePlayer(e) }>
+                    >
 
                     <h1 className="display-5 players__title">Create your players</h1>
 
@@ -135,7 +136,7 @@ class Players extends Component {
                     </div>
 
                     <div className="flex align-center">
-                        <button className="players__create">
+                        <button onClick={ (e) => this.handleCreatePlayer(e) } className="players__create">
                             <img className="icon" alt="" src={require("../../assets/icons/plus-square-solid.svg")}/>
                             <p className="b-text-3">Create</p>
                         </button>
@@ -147,7 +148,7 @@ class Players extends Component {
                     {/* <Roster players={ players }/> */}
 
                     <div>
-                        <button onClick={ this.handleRandomise } className="btn">Randomise</button>
+                        <button onClick={ (e) => this.handleRandomise(e) } className="btn">Randomise</button>
                     </div>
 
 

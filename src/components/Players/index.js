@@ -2,6 +2,9 @@ import { connect } from 'react-redux';
 import { createPlayer, randomiseTeams } from '../../data/actions/state';
 import { postPlayers } from '../../data/actions/api';
 
+// adding programmatic navigation after http request below
+import history from '../../history';
+
 import Players from './Players';
 
 const mapStateToProps = state => {
@@ -15,7 +18,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         handleCreatePlayer: data => dispatch(createPlayer(data)),
         handlePlayerUpload: () => dispatch(postPlayers()),
-        handleRandomise: () => dispatch(randomiseTeams()),
+        handleRandomise: () => { dispatch(randomiseTeams());
+            history.push("/draft/players/view"); }
     };
 };
 
