@@ -95,13 +95,13 @@
         color: $darkGrey;
         font-family: $font;
         position: absolute;
-        font-size: 1.2rem;
+        font-size: 1rem;
         text-align: center;
-        line-height: 2rem;
+        line-height: 1.5rem;
 
         // scaling svgs as background image
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         background: no-repeat center url("../assets/icons/comment.svg");
         background-size: contain;
     }
@@ -112,72 +112,72 @@
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 22.5rem;
+            left: 9.3rem;
+            top: 13rem;
         }
 
         &2 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 18.5rem;
+            left: 3.5rem;
+            top: 10.5rem;
         }
 
         &3 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 18.5rem;
+            left: 9.3rem;
+            top: 10.5rem;
         }
 
         &4 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 18.5rem;
+            left: 15rem;
+            top: 10.5rem;
         }
 
         &5 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 26.5rem;
-            top: 14.5rem;
+            left: 6.5rem;
+            top: 8.5rem;
         }
 
         &6 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 16.5rem;
-            top: 14.5rem;
+            left: 12rem;
+            top: 8.5rem;
         }
 
         &7 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 11.5rem;
+            left: 3.5rem;
+            top: 7rem;
         }
 
         &8 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 11.5rem;
+            left: 9.3rem;
+            top: 7rem;
         }
 
         &9 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 11.5rem;
+            left: 15rem;
+            top: 7rem;
         }
 
     }
@@ -188,7 +188,7 @@
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
+            left: 9.3rem;
             top: 0rem;
         }
 
@@ -196,64 +196,64 @@
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 3rem;
+            left: 3.5rem;
+            top: 2rem;
         }
 
         &3 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 3rem;
+            left: 9.3rem;
+            top: 2rem;
         }
 
         &4 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 3rem;
+            left: 15rem;
+            top: 2rem;
         }
 
         &5 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 26.5rem;
-            top: 7rem;
+            left: 6.5rem;
+            top: 3.5rem;
         }
 
         &6 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 16.5rem;
-            top: 7rem;
+            left: 12rem;
+            top: 3.5rem;
         }
 
         &7 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 8.5rem;
+            left: 3.5rem;
+            top: 4.5rem;
         }
 
         &8 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 8.5rem;
+            left: 9.3rem;
+            top: 4.5rem;
         }
 
         &9 {
             @extend %player-600;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 8.5rem;
+            left: 15rem;
+            top: 4.5rem;
         }
 
     }
@@ -344,8 +344,8 @@
         margin-left: 2rem;
 
         // scaling svgs as background image
-        width: 25rem;
-        height: 20rem;
+        width: 30rem;
+        height: 25rem;
         background: no-repeat center url("../assets/images/SVG/pitch2.svg");
         background-size: contain;
 
@@ -372,72 +372,72 @@
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 22.5rem;
+            left: 14rem;
+            top: 18.5rem;
         }
 
         &2 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 18.5rem;
+            left: 14rem;
+            top: 14.5rem;
         }
 
         &3 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 18.5rem;
+            left: 4rem;
+            top: 14.5rem;
         }
 
         &4 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 18.5rem;
+            left: 24rem;
+            top: 14.5rem;
         }
 
         &5 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 26.5rem;
-            top: 14.5rem;
+            left: 9rem;
+            top: 12.5rem;
         }
 
         &6 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 16.5rem;
-            top: 14.5rem;
+            left: 19rem;
+            top: 12.5rem;
         }
 
         &7 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 11.5rem;
+            left: 4rem;
+            top: 9.5rem;
         }
 
         &8 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 11.5rem;
+            left: 14rem;
+            top: 9.5rem;
         }
 
         &9 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 11.5rem;
+            left: 24rem;
+            top: 9.5rem;
         }
 
     }
@@ -448,76 +448,74 @@
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 0rem;
+            left: 14rem;
+            top: -1rem;
         }
 
         &2 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 3rem;
+            left: 4rem;
+            top: 2rem;
         }
 
         &3 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 3rem;
+            left: 14rem;
+            top: 2rem;
         }
 
         &4 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 3rem;
+            left: 24rem;
+            top: 2rem;
         }
 
         &5 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 26.5rem;
-            top: 7rem;
+            left: 9rem;
+            top: 3.5rem;
         }
 
         &6 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 16.5rem;
-            top: 7rem;
+            left: 19rem;
+            top: 3.5rem;
         }
 
         &7 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 21.5rem;
-            top: 8.5rem;
+            left: 4rem;
+            top: 6rem;
         }
 
         &8 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 11.5rem;
-            top: 8.5rem;
+            left: 14rem;
+            top: 6rem;
         }
 
         &9 {
             @extend %player-650;
             // position on field
             position: absolute;
-            left: 31.5rem;
-            top: 8.5rem;
+            left: 24rem;
+            top: 6rem;
         }
-
     }
-
 }
 
 
