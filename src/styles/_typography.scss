@@ -106,4 +106,5 @@
 .hidden {
     @extend %error;
     visibility: hidden;
+    font-size: .8rem;
 }

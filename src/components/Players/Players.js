@@ -142,7 +142,8 @@ class Players extends Component {
                             <option value="Forward">Forward</option>
                         </select>
                     </div>
-                    { position ? <p className="hidden">error</p> : <p className="error-3">Enter player position.</p> }
+                    {/* inline style for margin needs to be consolidated */}
+                    { position ? <p className="hidden">error</p> : <p style={{ marginTop: ".5rem"}} className="error-3">Enter player position.</p> }
 
                     <div className="flex align-center">
                         <button onClick={ (e) => this.handleCreatePlayer(e) } className="players__create">
