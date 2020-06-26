@@ -1,4 +1,4 @@
-import { createTeams, updateGame } from './state';
+import { createTeams, updateGame, updatedPlayers } from './state';
 
 // import API routes
 import axios from '../../axios';
@@ -9,7 +9,7 @@ export const postPlayers = () => {
          *  POST /players
          */
         axios.post("/players", { players: getState().players })
-            .then(console.log("posted"))
+            .then(updatedPlayers())
     };
 };
 
