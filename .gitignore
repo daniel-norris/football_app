@@ -28,3 +28,5 @@ yarn-error.log*
 *.ai
 *.eps
 licence
+get*.json
+post*.json

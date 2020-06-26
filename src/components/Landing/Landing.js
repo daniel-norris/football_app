@@ -8,22 +8,22 @@ const Landing = () => (
             <div className="flex">
                 <img className="landing__img" alt="" src={require("../../assets/icons/check-double-solid.svg")}/>
                 <div>
-                    <h2 className="display-5">Select</h2>
-                    <p className="text-3">Eiusmod ullamco id nostrud laborum do. Duis nulla veniam amet ad amet cupidatat incididunt commodo consequat magna consectetur aliqua. Quis ullamco qui Lorem nulla nostrud voluptate.</p>
+                    <h2 className="display-5">Draft</h2>
+                    <p className="text-3">Draft your team names and assign your team's kit. Choose the max number of players per side.</p>
                 </div>
             </div>
             <div className="flex">
                 <img className="landing__img" alt="" src={require("../../assets/icons/random-solid.svg")}/>
                 <div>
-                    <h2 className="display-5">Randomise</h2>
-                    <p className="text-3">Eu irure excepteur irure adipisicing proident cillum laborum sunt est nulla do. Incididunt culpa consequat ex consectetur ut voluptate amet officia aliquip.</p>
+                    <h2 className="display-5">Select</h2>
+                    <p className="text-3">Create your team's player roster and attribute each player with a position and skill rating.</p>
                 </div>
             </div>
             <div className="flex">
                 <img className="landing__img" alt="" src={require("../../assets/icons/trophy-solid.svg")}/>
                 <div>
-                    <h2 className="display-5">Predict</h2>
-                    <p className="text-3">Occaecat enim minim nostrud aliqua occaecat nulla ipsum proident mollit consequat excepteur exercitation. Occaecat officia culpa excepteur amet qui esse anim officia cupidatat officia.</p>
+                    <h2 className="display-5">Randomise</h2>
+                    <p className="text-3">Hit randomise and allow our algorithms to automatically assign your two team's player rosters.</p>
                 </div>
             </div>
         </section>

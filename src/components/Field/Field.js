@@ -9,11 +9,15 @@ class Field extends Component {
         return(
             <div className="field__teams">
                 { team1.map((player, index) => (
-                    <div key={ index } className={`player__marker${index + 1}`}>{ player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.</div>
+                    <div key={ index } className={`player__marker${index + 1}`}>
+                        { player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.
+                    </div>
                 ))}
 
                 { team2.map((player, index) => (
-                    <div key={ index } className={`player2__marker${index + 1}`}>{ player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.</div>
+                    <div key={ index } className={`player2__marker${index + 1}`}>
+                        { player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.
+                    </div>
                 ))}
 
             </div>

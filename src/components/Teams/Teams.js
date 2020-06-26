@@ -44,28 +44,8 @@ class Teams extends Component {
                         type="text"
                         id="squad1"
                         name="squad1"
-                        placeholder="Enter squad name..."></input>
-
-                    <div className="teams__kit">
-                        <div className="flex column align-center">
-                            <label htmlFor="kit1">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="kit1" name="kit" value="1"/>
-                        </div>
-                        <div className="flex column align-center">
-                            <label htmlFor="kit2">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="kit2" name="kit" value="2"/>
-                        </div>
-                        <div className="flex column align-center">
-                            <label htmlFor="kit3">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="kit3" name="kit" value="3"/>
-                        </div>
-                    </div>
+                        placeholder="Enter squad name...">
+                    </input>
 
                     <label className="b-text-3" htmlFor="squad2">Squad 2</label>
                     <input
@@ -73,35 +53,16 @@ class Teams extends Component {
                         type="text"
                         id="squad2"
                         name="squad2"
-                        placeholder="Enter squad name..."></input>
-
-                    <div className="teams__kit">
-                        <div className="flex column align-center">
-                            <label htmlFor="t2kit1">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="t2kit1" name="kit" value="1"/>
-                        </div>
-                        <div className="flex column align-center">
-                            <label htmlFor="t2kit2">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="t2kit2" name="kit" value="2"/>
-                        </div>
-                        <div className="flex column align-center">
-                            <label htmlFor="t2kit3">
-                                <img className="icon-lg" alt="" src={require("../../assets/icons/soccer.svg")}/>
-                            </label>
-                            <input type="radio" id="t2kit3" name="kit" value="3"/>
-                        </div>
-                    </div>
+                        placeholder="Enter squad name...">
+                    </input>
 
                     <section className="flex column">
                         <label className="b-text-3">Players per side</label>
                         <input
                             onChange={ (e) => this.handlePlayersPerSideChange(e) }
                             type="number"
-                            placeholder="Choose team size..."></input>
+                            placeholder="Choose team size...">
+                        </input>
 
                         <div>
                             <button
