@@ -48,14 +48,13 @@ const App = () => {
                     <Route exact path="/draft/players">
                         <div className="teams__container">
                             <Players/>
-
                         </div>
                     </Route>
 
                     <Route exact path="/draft/players/:id/view" render={({ match }) => (
-                        <div className="teams__container">
+                        <div className="randomise__container">
+                            <Field/>
                             <Randomise id={match.params.id}/>
-                            <Field />
                         </div>
                     )}>
                     </Route>

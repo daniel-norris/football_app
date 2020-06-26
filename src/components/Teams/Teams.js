@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 class Teams extends Component {
     constructor(props) {
@@ -35,7 +34,6 @@ class Teams extends Component {
 
     render() {
 
-        const { teams } = this.props;
         const { players_side, team_1, team_2 } = this.state;
 
         return(
@@ -71,7 +69,7 @@ class Teams extends Component {
                             type="number"
                             placeholder="Choose team size...">
                         </input>
-                        { players_side > 9 || players_side == 0 ? <p className="error-3">Enter a team size of between 1 - 9 players.</p> : <p className="hidden">error</p> }
+                        { players_side > 9 || players_side === 0 ? <p className="error-3">Enter a team size of between 1 - 9 players.</p> : <p className="hidden">error</p> }
 
 
                         <div>

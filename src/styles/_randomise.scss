@@ -1,47 +1,178 @@
-.randomise {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
 
-    &__title {
-        margin-bottom: .5rem;
-    }
+    .randomise {
 
-    &__table {
-        margin-bottom: 1rem;
-    }
+        &__container {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+        }
 
-    &__table-header {
-        background: rgba($color: #000000, $alpha: 0.3);
+        &__title {
+            margin-bottom: .5rem;
+        }
 
-        th {
-            padding: .4rem;
+        &__table {
+            margin-bottom: 1rem;
+        }
+
+        &__table-header {
+            background: rgba($color: #000000, $alpha: 0.3);
+
+            th {
+                padding: .4rem;
+            }
+        }
+
+        &__table-body {
+            font-family: $font;
+            color: $white;
+            text-align: center;
+
+            // support for <= ie8
+            tr {
+                background: $secondaryColor;
+            }
+
+            td {
+                padding: .4rem;
+            }
+
+            // zebra striping tables depending on row count
+            tr:nth-child(odd) {
+                background: rgba($color: #ffffff, $alpha: 0.2);
+            }
+
+            tr:nth-child(even) {
+                background: $primaryColor;
+            }
+
+            // highlighting rows on hover
+            tr:hover {
+                background: $tertiaryColor;
+            }
         }
     }
+}
 
-    &__table-body {
-        font-family: $font;
-        color: $white;
-        text-align: center;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .randomise {
 
-        // support for <= ie8
-        tr {
-            background: $secondaryColor;
+        &__container {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
         }
 
-        td {
-            padding: .4rem;
+        &__section {
+            display: flex;
+            flex-direction: column;
         }
 
-        // zebra striping tables depending on row count
-        tr:nth-child(odd) {
-            background: rgba($color: #ffffff, $alpha: 0.2);
+        &__title {
+            margin-bottom: .5rem;
         }
 
-        tr:nth-child(even) {
-            background: $primaryColor;
+        &__table {
+            margin-bottom: 1rem;
         }
 
-        // highlighting rows on hover
-        tr:hover {
-            background: $tertiaryColor;
+        &__table-header {
+            background: rgba($color: #000000, $alpha: 0.3);
+
+            th {
+                padding: .4rem;
+            }
+        }
+
+        &__table-body {
+            font-family: $font;
+            color: $white;
+            text-align: center;
+
+            // support for <= ie8
+            tr {
+                background: $secondaryColor;
+            }
+
+            td {
+                padding: .4rem;
+            }
+
+            // zebra striping tables depending on row count
+            tr:nth-child(odd) {
+                background: rgba($color: #ffffff, $alpha: 0.2);
+            }
+
+            tr:nth-child(even) {
+                background: $primaryColor;
+            }
+
+            // highlighting rows on hover
+            tr:hover {
+                background: $tertiaryColor;
+            }
+        }
+    }
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+and (orientation: landscape) {
+    .randomise {
+
+        &__container {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        &__title {
+            margin-bottom: .5rem;
+        }
+
+        &__table {
+            margin-bottom: 1rem;
+        }
+
+        &__table-header {
+            background: rgba($color: #000000, $alpha: 0.3);
+
+            th {
+                padding: .4rem;
+            }
+        }
+
+        &__table-body {
+            font-family: $font;
+            color: $white;
+            text-align: center;
+
+            // support for <= ie8
+            tr {
+                background: $secondaryColor;
+            }
+
+            td {
+                padding: .4rem;
+            }
+
+            // zebra striping tables depending on row count
+            tr:nth-child(odd) {
+                background: rgba($color: #ffffff, $alpha: 0.2);
+            }
+
+            tr:nth-child(even) {
+                background: $primaryColor;
+            }
+
+            // highlighting rows on hover
+            tr:hover {
+                background: $tertiaryColor;
+            }
         }
     }
 }
