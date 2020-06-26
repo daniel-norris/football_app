@@ -12,6 +12,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    & > p {
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .footer__icon {
@@ -34,6 +38,7 @@
         filter: brightness(10);
     }
 
+    // changing text on hover
     &:hover > p {
         color: #eee;
     }

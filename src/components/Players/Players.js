@@ -54,6 +54,7 @@ class Players extends Component {
     render() {
 
         const { players, game } = this.props;
+        const { first, last, age, skill, position } = this.state;
 
         return (
             <>
@@ -68,21 +69,27 @@ class Players extends Component {
                         onChange={ (e) => this.handleFirstNameChange(e) }
                         type="text"
                         placeholder="Player first name..."
-                        value={ this.state.first }></input>
+                        value={ this.state.first }>
+                    </input>
+                    { first ? <p className="hidden">error</p> : <p className="error-3">Enter a player name.</p> }
 
                     <label className="b-text-3">Player last name</label>
                     <input
                         onChange={ (e) => this.handleLastNameChange(e) }
                         type="text"
                         placeholder="Player last name..."
-                        value={ this.state.last }></input>
+                        value={ this.state.last }>
+                    </input>
+                    { last ? <p className="hidden">error</p> : <p className="error-3">Enter a player surname.</p> }
 
                     <label className="b-text-3">Age</label>
                     <input
                         onChange={ (e) => this.handleAgeChange(e) }
                         type="number"
                         placeholder="Player age..."
-                        value={ this.state.age }></input>
+                        value={ this.state.age }>
+                    </input>
+                    { age ? <p className="hidden">error</p> : <p className="error-3">Enter player age.</p> }
 
                     <p className="b-text-3">Skill</p>
                     <div className="players__skill">
@@ -124,6 +131,7 @@ class Players extends Component {
                                 onChange={ (e) => this.handleSkillChange(e) }/>
                         </div>
                     </div>
+                    { skill ? <p className="hidden">error</p> : <p className="error-3">Enter a player skill rating.</p> }
 
                     <div className="players__position">
                         <label className="b-text-3" htmlFor="position">Position</label>
@@ -134,6 +142,7 @@ class Players extends Component {
                             <option value="Forward">Forward</option>
                         </select>
                     </div>
+                    { position ? <p className="hidden">error</p> : <p className="error-3">Enter player position.</p> }
 
                     <div className="flex align-center">
                         <button onClick={ (e) => this.handleCreatePlayer(e) } className="players__create">
