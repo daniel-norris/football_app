@@ -7,13 +7,13 @@ class Players extends Component {
     constructor(props) {
         super(props);
         this.state = { first: "", last: "", age: "", skill: 0, position: "" }
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleCreatePlayer = this.handleCreatePlayer.bind(this);
         this.handleFirstNameChange = this.handleFirstNameChange.bind(this);
         this.handleLastNameChange = this.handleLastNameChange.bind(this);
         this.handleAgeChange = this.handleAgeChange.bind(this);
         this.handleSkillChange = this.handleSkillChange.bind(this);
         this.handlePositionChange = this.handlePositionChange.bind(this);
-        this.handleClick = this.handleClick.bind(this);
+        this.handleRandomise = this.handleRandomise.bind(this);
     }
 
     handleFirstNameChange(e) {
@@ -36,12 +36,12 @@ class Players extends Component {
         this.setState({ position: e.currentTarget.value })
     }
 
-    handleSubmit(e) {
+    handleCreatePlayer(e) {
         e.preventDefault();
         this.props.handleCreatePlayer(this.state);
     }
 
-    handleClick() {
+    handleRandomise() {
         this.props.handleRandomise();
         this.props.handlePlayerUpload();
     }
@@ -54,7 +54,7 @@ class Players extends Component {
             <>
                 <form
                     className="players__wrapper"
-                    onSubmit={ (e) => this.handleSubmit(e) }>
+                    onSubmit={ (e) => this.handleCreatePlayer(e) }>
 
                     <h1 className="display-5 players__title">Create your players</h1>
 
@@ -140,7 +140,7 @@ class Players extends Component {
                     {/* <Roster players={ players }/> */}
 
                     <Link to="/draft/players/view">
-                        <button onClick={ this.handleClick } className="btn">Randomise</button>
+                        <button onClick={ this.handleRandomise } className="btn">Randomise</button>
                     </Link>
 
                 </form>
