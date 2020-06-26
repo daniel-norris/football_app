@@ -44,27 +44,13 @@ const App = () => {
                     <Route exact path="/draft">
                         <div className="teams__container">
                             <Teams/>
-
                         </div>
                     </Route>
 
                     <Route exact path="/draft/players">
                         <div className="teams__container">
                             <Players/>
-                            <div className="field__teams">
-                                <div className="player__marker1">P1</div>
-                                <div className="player__marker2">P2</div>
-                                <div className="player__marker3">P3</div>
-                                <div className="player__marker4">P4</div>
-                                <div className="player__marker5">P5</div>
-                                <div className="player__marker6">P6</div>
-                                <div className="player2__marker1">P1</div>
-                                <div className="player2__marker2">P2</div>
-                                <div className="player2__marker3">P3</div>
-                                <div className="player2__marker4">P4</div>
-                                <div className="player2__marker5">P5</div>
-                                <div className="player2__marker6">P6</div>
-                            </div>
+
                         </div>
                     </Route>
 

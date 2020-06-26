@@ -4,7 +4,7 @@ class Field extends Component {
 
     render() {
 
-        const { team1, team2 } = this.props;
+        const { team1, team2, display } = this.props;
 
         return(
             <div className="field__teams">

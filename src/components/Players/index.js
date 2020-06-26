@@ -7,6 +7,7 @@ import Players from './Players';
 const mapStateToProps = state => {
     return {
         players: state.players,
+        game: state.game,
     };
 };
 

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Roster from '../Roster/Roster';
-import { Link } from 'react-router-dom';
-
 
 class Players extends Component {
     constructor(props) {
@@ -38,17 +36,23 @@ class Players extends Component {
 
     handleCreatePlayer(e) {
         e.preventDefault();
-        this.props.handleCreatePlayer(this.state);
+        const { players, game } = this.props;
+        if(players.length < game.players_per_side * 2) {
+            this.props.handleCreatePlayer(this.state);
+        }
     }
 
     handleRandomise() {
-        this.props.handleRandomise();
-        this.props.handlePlayerUpload();
+        const { players, game } = this.props;
+        if(players.length === game.players_per_side * 2) {
+            this.props.handleRandomise();
+            this.props.handlePlayerUpload();
+        }
     }
 
     render() {
 
-        const { players } = this.props;
+        const { players, game } = this.props;
 
         return (
             <>
@@ -130,20 +134,39 @@ class Players extends Component {
                         </select>
                     </div>
 
-                    <div>
+                    <div className="flex align-center">
                         <button className="players__create">
                             <img className="icon" alt="" src={require("../../assets/icons/plus-square-solid.svg")}/>
                             <p className="b-text-3">Create</p>
                         </button>
+
+                        <p className="players__tally display-5">{ players.length } / { game.players_per_side * 2 }</p>
+
                     </div>
 
                     {/* <Roster players={ players }/> */}
 
-                    <Link to="/draft/players/view">
+                    <div>
                         <button onClick={ this.handleRandomise } className="btn">Randomise</button>
-                    </Link>
+                    </div>
+
 
                 </form>
+
+                <div className="field__teams">
+                    {/**
+                     * Creates an iterable object with a length property set to the size of players per side the user has selected. Avoids polluting the component namespace with an array just so that we can iterate over to create markers. Also checks to see if the size per team has exceeded the amount of markers we have or our validation rules.
+                     *
+                     */}
+                    { game.players_per_side <= 9 ? (Array.from({length: game.players_per_side}, (item, index) =>
+                        <div key={ index } className={`player__marker${index + 1}`}>P{ index + 1 }</div>
+                        )) : null
+                    }
+                    { game.players_per_side <= 9 ? (Array.from({length: game.players_per_side}, (item, index) =>
+                        <div key={ index } className={`player2__marker${index + 1}`}>P{ index + 1 }</div>
+                        )) : null
+                    }
+                </div>
             </>
         )
     }
