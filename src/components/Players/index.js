@@ -15,11 +15,12 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = (dispatch) => {
+
     return {
         handleCreatePlayer: data => dispatch(createPlayer(data)),
         handlePlayerUpload: () => dispatch(postPlayers()),
-        handleRandomise: () => { dispatch(randomiseTeams());
-            history.push("/draft/players/view"); }
+        handleRandomise: data => { dispatch(randomiseTeams());
+            history.push(`/draft/players/${data.id}/view`); }
     };
 };
 

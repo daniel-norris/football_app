@@ -11,7 +11,7 @@
     font-weight: 600;
     font-size: 90%;
     background-color: rgba($color: #000000, $alpha: 0.3);
-    margin: .5rem 0;
+    margin: .5rem 0 .2rem 0;
 }
 
 input {
@@ -29,7 +29,7 @@ select {
 	color: $darkGrey;
 	line-height: 1.3;
 	padding: .3rem 1.4rem .3rem .8rem;
-	width: 105%; // not sure why this isnt matching other input fields in chrome
+	width: 105%; // unsure this isnt matching other input fields in chrome
 	// max-width: 100%;
 	box-sizing: border-box;
 	// margin: 0;

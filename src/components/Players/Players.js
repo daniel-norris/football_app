@@ -45,7 +45,7 @@ class Players extends Component {
         e.preventDefault();
         const { players, game } = this.props;
         if(players.length === game.players_per_side * 2) {
-            this.props.handleRandomise();
+            this.props.handleRandomise(game);
             this.props.handlePlayerUpload();
         }
     }
@@ -142,7 +142,7 @@ class Players extends Component {
                         </select>
                     </div>
                     {/* inline style for margin needs to be consolidated */}
-                    { position ? <p className="hidden">error</p> : <p style={{ marginTop: ".5rem"}} className="error-3">Enter player position.</p> }
+                    { position ? <p className="hidden">error</p> : <p style={{ marginTop: ".2rem"}} className="error-3">Enter player position.</p> }
 
                     <div className="flex align-center">
                         <button onClick={ (e) => this.handleCreatePlayer(e) } className="players__create">
