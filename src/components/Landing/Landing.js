@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Landing = () => (
     <main className="landing">
 
-        <section className="flex landing__feature">
+        <section className="landing__feature">
             <div className="flex">
                 <img className="landing__img" alt="" src={require("../../assets/icons/check-double-solid.svg")}/>
                 <div>
