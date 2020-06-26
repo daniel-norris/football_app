@@ -14,7 +14,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
         handleGameUpdate: id => dispatch(getGame(id)),
     }
 };

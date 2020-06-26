@@ -24,7 +24,8 @@ export const createTeams = (state, { teams }) => ({
 
 export const updateGame = (state, { game }) => ({
     ...state,
-    game: game
+    game: game,
+    loaded: true,
 })
 
 export const updatePlayers = (state, { loaded }) => ({

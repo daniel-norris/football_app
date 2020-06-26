@@ -31,7 +31,7 @@ export const postTeams = ({ team_1, team_2, players_side }) => {
 export const getGame = (id) => {
     return (dispatch) => {
         /**
-         *  GET /games
+         *  GET /game
          */
         axios.get(`/games/${id}`).then(({ data }) => {
             dispatch(updateGame(data.data));

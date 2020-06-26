@@ -3,16 +3,14 @@ import React, { Component } from 'react';
 class Randomise extends Component {
 
     componentDidMount() {
-        if(this.props.loaded) {
-            this.props.handleGameUpdate(this.props.id);
-        }
+        this.props.handleGameUpdate(this.props.id);
     }
 
     render() {
 
-        const { team1, team2, game, loaded } = this.props;
+        const { team1, team2, game, loaded, id } = this.props;
 
-        return !loaded ? <p>Loading...</p> : (
+        return !loaded ? <p className="display-5">Loading...</p> : (
             <>
                 <div>
                     <h1 className="display-5 randomise__title">Team: { game['team_1'].name }</h1>
@@ -27,11 +25,11 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { team1.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
-                                team1.map((player, index) => (
+                            { game['team_1'].players.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
+                                game['team_1'].players.map((player, index) => (
                                     <tr key={ index }>
-                                        <td>{ player.first }</td>
-                                        <td>{ player.last }</td>
+                                        <td>{ player.first_name }</td>
+                                        <td>{ player.last_name }</td>
                                         <td>{ player.age }</td>
                                         <td>{ player.skill }</td>
                                         <td>{ player.position }</td>
@@ -53,11 +51,11 @@ class Randomise extends Component {
                             </tr>
                         </thead>
                         <tbody className="randomise__table-body">
-                            { team2.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
-                                team2.map((player, index) => (
+                            { game['team_2'].players.length === 0 ? <tr><td colspan="5">No players to display</td></tr> : (
+                                game['team_2'].players.map((player, index) => (
                                     <tr key={ index }>
-                                        <td>{ player.first }</td>
-                                        <td>{ player.last }</td>
+                                        <td>{ player.first_name }</td>
+                                        <td>{ player.last_name }</td>
                                         <td>{ player.age }</td>
                                         <td>{ player.skill }</td>
                                         <td>{ player.position }</td>
