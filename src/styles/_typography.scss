@@ -84,4 +84,7 @@
     font-size: 2rem;
     text-transform: uppercase;
 
+    &__highlight {
+        color: $tertiaryColor;
+    }
 }

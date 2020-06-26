@@ -22,7 +22,7 @@ const App = () => {
 
             <header className="header">
                 <Link to="/">
-                    <h1 className="logo">Foo Draft</h1>
+                    <h1 className="logo">Foo<span className="logo__highlight">Draft</span></h1>
                 </Link>
             </header>
 
