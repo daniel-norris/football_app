@@ -24,7 +24,7 @@ export const createTeams = (state, { teams }) => ({
 
 export const updateGame = (state, { game }) => ({
     ...state,
-    games: game
+    game: game
 })
 
 export const reducer = (state, action) => {

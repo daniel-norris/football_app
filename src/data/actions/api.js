@@ -28,12 +28,12 @@ export const postTeams = ({ team_1, team_2, players_side }) => {
     };
 };
 
-export const getGame = () => {
+export const getGame = (id) => {
     return (dispatch) => {
         /**
          *  GET /games
          */
-        axios.get("/games").then(({ data }) => {
+        axios.get(`/games/${id}`).then(({ data }) => {
             dispatch(updateGame(data.data));
         })
     };

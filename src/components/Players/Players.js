@@ -45,8 +45,8 @@ class Players extends Component {
         e.preventDefault();
         const { players, game } = this.props;
         if(players.length === game.players_per_side * 2) {
-            this.props.handleRandomise(game);
             this.props.handlePlayerUpload();
+            this.props.handleRandomise(game);
         }
     }
 
