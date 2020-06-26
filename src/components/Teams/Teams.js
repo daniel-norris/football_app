@@ -16,7 +16,7 @@ class Teams extends Component {
         const { team_1, team_2, players_side } = this.state;
 
         // validate that fields are completed
-        if(team_1 && team_2 && players_side) {
+        if(team_1 && team_2 && (players_side <= 9 && players_side > 0)) {
             this.props.handleCreateTeams(this.state);
         }
     }
