@@ -24,9 +24,9 @@ export const updateGame = (data) => {
     };
 };
 
-export const updatedPlayers = () => {
+export const updatePlayers = () => {
     return {
-        type: "UPDATED_PLAYERS",
+        type: "UPDATE_PLAYERS",
         loaded: true,
     };
 };

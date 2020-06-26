@@ -3,15 +3,16 @@ import React, { Component } from 'react';
 class Randomise extends Component {
 
     componentDidMount() {
-
-        this.props.handleGameUpdate(this.props.id);
+        if(this.props.loaded) {
+            this.props.handleGameUpdate(this.props.id);
+        }
     }
 
     render() {
 
-        const { team1, team2, game } = this.props;
+        const { team1, team2, game, loaded } = this.props;
 
-        return(
+        return !loaded ? <p>Loading...</p> : (
             <>
                 <div>
                     <h1 className="display-5 randomise__title">Team: { game['team_1'].name }</h1>

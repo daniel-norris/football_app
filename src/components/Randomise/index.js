@@ -8,6 +8,7 @@ const mapStateToProps = state => {
         team1: state.team1,
         team2: state.team2,
         game: state.game,
+        loaded: state.loaded,
     };
 };
 
