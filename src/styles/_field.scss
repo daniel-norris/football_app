@@ -268,6 +268,66 @@
         top: 14.5rem;
     }
 
+    &7 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 21.5rem;
+        top: 11.5rem;
+    }
+
+    &8 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 11.5rem;
+        top: 11.5rem;
+    }
+
+    &9 {
+        color: $darkGrey;
+        font-family: $font;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 2rem;
+
+        // scaling svgs as background image
+        width: 3rem;
+        height: 3rem;
+        background: no-repeat center url("../assets/icons/comment.svg");
+        background-size: contain;
+
+        // position on field
+        position: absolute;
+        left: 31.5rem;
+        top: 11.5rem;
+    }
+
 }
 
 .player2__marker {

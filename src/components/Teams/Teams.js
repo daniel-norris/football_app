@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Teams extends Component {
     constructor(props) {
         super(props);
-        this.state = { team_1: "", team_2: "", players_side: 5 };
+        this.state = { team_1: "", team_2: "", players_side: 6 };
         this.handleSquadSubmit = this.handleSquadSubmit.bind(this);
         this.handleSquad1NameChange = this.handleSquad1NameChange.bind(this);
         this.handleSquad2NameChange = this.handleSquad2NameChange.bind(this);
@@ -31,6 +31,7 @@ class Teams extends Component {
     render() {
 
         const { teams } = this.props;
+        const { players_side } = this.state;
 
         return(
             <>
@@ -72,6 +73,17 @@ class Teams extends Component {
                         </div>
                     </section>
                 </form>
+
+                <div className="field__teams">
+                    {/**
+                     * Creates an iterable object with a length property set to the size of players per side the user has selected. Avoids polluting the component namespace with an array just so that we can iterate over to create markers. Also checks to see if the size per team has exceeded the amount of markers we have or our validation rules.
+                     *
+                     */}
+                    { players_side <= 9 ? (Array.from({length: players_side}, (item, index) =>
+                        <div key={ index } className={`player__marker${index + 1}`}>P{ index + 1 }</div>
+                        )) : null
+                    }
+                </div>
             </>
         )
     }
