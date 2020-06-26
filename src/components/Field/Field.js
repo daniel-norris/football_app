@@ -4,19 +4,19 @@ class Field extends Component {
 
     render() {
 
-        const { team1, team2 } = this.props;
+        const { game, loaded } = this.props;
 
-        return(
+        return !loaded ? null : (
             <div className="field__teams">
-                { team1.map((player, index) => (
+                { game['team_1'].players.map((player, index) => (
                     <div key={ index } className={`player__marker${index + 1}`}>
-                        { player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.
+                        { player.first_name[0] }. { player.last_name[0] }.
                     </div>
                 ))}
 
-                { team2.map((player, index) => (
+                { game['team_2'].players.map((player, index) => (
                     <div key={ index } className={`player2__marker${index + 1}`}>
-                        { player.first[0].toUpperCase() }. { player.last[0].toUpperCase() }.
+                        { player.first_name[0] }. { player.last_name[0] }.
                     </div>
                 ))}
 
