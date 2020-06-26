@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Roster from '../Roster/Roster';
 
 class Players extends Component {
     constructor(props) {
@@ -154,8 +153,6 @@ class Players extends Component {
                         <p className="players__tally display-5">{ players.length } / { game.players_per_side * 2 }</p>
 
                     </div>
-
-                    {/* <Roster players={ players }/> */}
 
                     <div>
                         <button onClick={ (e) => this.handleRandomise(e) } className="btn">Randomise</button>

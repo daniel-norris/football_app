@@ -8,12 +8,12 @@ class Randomise extends Component {
 
     render() {
 
-        const { team1, team2 } = this.props;
+        const { team1, team2, game } = this.props;
 
         return(
             <>
                 <div>
-                    <h1 className="display-5 randomise__title">Team 1</h1>
+                    <h1 className="display-5 randomise__title">Team: { game['team_1'].name }</h1>
                     <table className="randomise__table">
                         <thead className="randomise__table-header">
                             <tr className="b-text-3">
@@ -39,7 +39,7 @@ class Randomise extends Component {
                         </tbody>
                     </table>
 
-                    <h1 className="display-5 randomise__title">Team 2</h1>
+                    <h1 className="display-5 randomise__title">Team: { game['team_2'].name }</h1>
                     <table className="randomise__table">
                         <thead className="randomise__table-header">
                             <tr className="b-text-3">
