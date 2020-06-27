@@ -3,7 +3,9 @@ import reducer, {
     createTeams,
     randomiseTeams,
     predictWinner,
-    team1Skill,
+    team1SumSkill,
+    team2SumSkill,
+    averageSkill
 } from './reducer';
 import initial from './initial';
 
@@ -84,7 +86,7 @@ it('creates two teams', () => {
 });
 
 
-it('reducer logic after randomisation', () => {
+it('has post player object successfully been sent', () => {
     // create reducer randomise team tests here
 
     let result = randomiseTeams(initialState, { uploaded: true });
@@ -96,13 +98,11 @@ it('reducer logic after randomisation', () => {
 it('calculates win probability based off avg skill rating of team', () => {
     // create win probability tests here
 
-
-
     let many = {
         uploaded: false,
         game: {
             id: 1,
-            players_per_side: 6,
+            players_per_side: 2,
             winner: "",
             team_1: {
                 id: 1,
@@ -113,7 +113,7 @@ it('calculates win probability based off avg skill rating of team', () => {
                         first_name: "asdf",
                         last_name: "asdf",
                         full_name: "asdf asdf",
-                        skill: 2,
+                        skill: 1,
                         age: 21,
                         position: "Forward",
                     },
@@ -122,7 +122,7 @@ it('calculates win probability based off avg skill rating of team', () => {
                         first_name: "asdf",
                         last_name: "asdf",
                         full_name: "asdf asdf",
-                        skill: 2,
+                        skill: 3,
                         age: 21,
                         position: "Forward",
                     }
@@ -137,7 +137,7 @@ it('calculates win probability based off avg skill rating of team', () => {
                         first_name: "asdf",
                         last_name: "asdf",
                         full_name: "asdf asdf",
-                        skill: 2,
+                        skill: 5,
                         age: 21,
                         position: "Forward",
                     },
@@ -146,7 +146,7 @@ it('calculates win probability based off avg skill rating of team', () => {
                         first_name: "asdf",
                         last_name: "asdf",
                         full_name: "asdf asdf",
-                        skill: 1,
+                        skill: 3,
                         age: 21,
                         position: "Forward",
                     }
@@ -157,63 +157,9 @@ it('calculates win probability based off avg skill rating of team', () => {
 
     let result = predictWinner(many);
 
-    expect(result.game.winner).toEqual(1);
+    expect(result.game.winner).toEqual(2);
+    // expect(result.game['team_1'].winChance).toEqual(0);
 
-    // let result = predictWinner(many);
-
-    // expect(result.game).toEqual({
-        //     id: 1,
-        //     players_per_side: 6,
-        //     winner: 1,
-    //     team_1: {
-    //         id: 1,
-    //         name: "asdfas",
-    //         players: [
-    //             {
-    //                 id: 1,
-    //                 first_name: "asdf",
-    //                 last_name: "asdf",
-    //                 full_name: "asdf asdf",
-    //                 skill: 2,
-    //                 age: 21,
-    //                 position: "Forward",
-    //             },
-    //             {
-    //                 id: 2,
-    //                 first_name: "asdf",
-    //                 last_name: "asdf",
-    //                 full_name: "asdf asdf",
-    //                 skill: 2,
-    //                 age: 21,
-    //                 position: "Forward",
-    //             }
-    //         ]
-    //     },
-    //     team_2: {
-    //         id: 2,
-    //         name: "asdfas",
-    //         players: [
-    //             {
-    //                 id: 3,
-    //                 first_name: "asdf",
-    //                 last_name: "asdf",
-    //                 full_name: "asdf asdf",
-    //                 skill: 2,
-    //                 age: 21,
-    //                 position: "Forward",
-    //             },
-    //             {
-    //                 id: 4,
-    //                 first_name: "asdf",
-    //                 last_name: "asdf",
-    //                 full_name: "asdf asdf",
-    //                 skill: 1,
-    //                 age: 21,
-    //                 position: "Forward",
-    //             }
-    //         ]
-    //     },
-    // });
 });
 
 

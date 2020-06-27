@@ -19,11 +19,9 @@ const mapDispatchToProps = (dispatch) => {
 
     return {
         handleCreatePlayer: data => dispatch(createPlayer(data)),
-        handlePlayerUpload: () => dispatch(postPlayers()),
+        handlePlayerUpload: (id) => dispatch(postPlayers(id)),
         handleRandomise: (data, uploaded) => { dispatch(randomiseTeams());
-            if(uploaded) {
-                history.push(`/draft/players/${data.id}/view`); }
-            }
+            history.push(`/draft/players/${data.id}/view`); }
     };
 };
 

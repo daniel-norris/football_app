@@ -45,7 +45,7 @@ class Players extends Component {
         e.preventDefault();
         const { players, game, uploaded } = this.props;
         if(players.length === game.players_per_side * 2) {
-            this.props.handlePlayerUpload();
+            this.props.handlePlayerUpload(game.id);
             this.props.handleRandomise(game, uploaded);
         }
     }
@@ -155,7 +155,7 @@ class Players extends Component {
                     </div>
 
                     <div>
-                        <button onClick={ (e) => this.handleRandomise(e) } className="btn">{ !uploaded ? "Confirm" : "Randomise" }</button>
+                        <button onClick={ (e) => this.handleRandomise(e) } className="btn">Randomise</button>
                     </div>
 
 

@@ -7,6 +7,7 @@ const mapStateToProps = state => {
     return {
         game: state.game,
         loaded: state.loaded,
+        uploaded: state.uploaded,
     };
 };
 

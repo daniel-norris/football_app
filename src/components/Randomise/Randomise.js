@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 class Randomise extends Component {
 
     componentDidMount() {
-        this.props.handleGameUpdate(this.props.id);
+        if(!this.props.loaded && !this.props.uploaded) {
+            this.props.handleGameUpdate(this.props.id);
+        }
     }
 
     render() {
