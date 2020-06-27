@@ -9,6 +9,7 @@ import initial from './initial';
 const initialState = {
     players: [],
     game: [],
+    uploaded: false,
 };
 
 it('creates a player', () => {
@@ -85,6 +86,14 @@ it('creates two teams', () => {
 it('reducer logic after randomisation', () => {
     // create reducer randomise team tests here
 
+    let result = randomiseTeams(initialState, { uploaded: true });
+
+    expect(result.uploaded).toEqual(true);
+});
+
+it('calculates win probability based off avg skill rating of team', () => {
+    // create win probability tests here
+
     let many = {
         uploaded: false,
         game: {
@@ -133,7 +142,7 @@ it('reducer logic after randomisation', () => {
                         first_name: "asdf",
                         last_name: "asdf",
                         full_name: "asdf asdf",
-                        skill: 2,
+                        skill: 1,
                         age: 21,
                         position: "Forward",
                     }
@@ -141,22 +150,6 @@ it('reducer logic after randomisation', () => {
             },
         }
     }
-
-    let result = randomiseTeams(many, { uploaded: true });
-
-    expect(result.uploaded).toEqual({ uploaded: true });
-
-    // expect(result.games[0]).toEqual({ team_1: { name: "Squad Uno" }});
-    // expect(result.games).not.toBe(initialState.games);
-
-    // result = createTeams(result, { teams: { team_1: { name: "Squad Dos" } }})
-
-});
-
-it('calculates win probability based off avg skill rating of team', () => {
-    // create win probability tests here
-
-
 
 });
 
