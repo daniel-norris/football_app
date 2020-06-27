@@ -13,6 +13,12 @@
             margin-bottom: .5rem;
         }
 
+        &__section {
+            > div > p {
+                margin-left: 1rem;
+            }
+        }
+
         &__table {
             margin-bottom: 1rem;
         }
@@ -69,6 +75,10 @@
         &__section {
             display: flex;
             flex-direction: column;
+
+            > div > p {
+                margin-left: 1rem;
+            }
         }
 
         &__title {
@@ -132,6 +142,7 @@ and (orientation: landscape) {
 
         &__title {
             margin-bottom: .5rem;
+
         }
 
         &__table {

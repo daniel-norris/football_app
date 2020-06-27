@@ -16,16 +16,13 @@ import Field from './Field/index.js';
 import Demo from './Demo/Demo';
 
 import history from '../history';
+import Header from './Header/Header';
 
 const App = () => {
     return (
         <Router history={history}>
 
-            <header className="header">
-                <Link to="/">
-                    <h1 className="logo">Foo<span className="logo__highlight">Draft</span></h1>
-                </Link>
-            </header>
+            <Header/>
 
             <div className="container">
 

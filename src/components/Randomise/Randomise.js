@@ -16,7 +16,13 @@ class Randomise extends Component {
             <>
                 <main >
                     <section className="randomise__section">
-                        <h1 className="display-5 randomise__title">Team: { game['team_1'].name }</h1>
+                        <div className="flex">
+                            <h1 className="display-5 randomise__title">{ game['team_1'].name } - </h1>
+                            <p className="display-5">{ game['team_1'].winChance * 100 }%</p>
+                            { (game.winner === 3 || game.winner === 1) ? (
+                                <img className="icon-med" alt="" src={require("../../assets/icons/trophy-solid.svg")}/>
+                            ) : null }
+                        </div>
                         <table className="randomise__table">
                             <thead className="randomise__table-header">
                                 <tr className="b-text-3">
@@ -43,7 +49,13 @@ class Randomise extends Component {
                         </table>
                     </section>
                     <section className="randomise__section">
-                        <h1 className="display-5 randomise__title">Team: { game['team_2'].name }</h1>
+                        <div className="flex">
+                            <h1 className="display-5 randomise__title">{ game['team_2'].name } - </h1>
+                            <p className="display-5">{ game['team_2'].winChance * 100 }%</p>
+                            { (game.winner === 3 || game.winner === 2) ? (
+                                <img className="icon-med" alt="" src={require("../../assets/icons/trophy-solid.svg")}/>
+                            ) : null }
+                        </div>
                         <table className="randomise__table">
                             <thead className="randomise__table-header">
                                 <tr className="b-text-3">

@@ -36,8 +36,13 @@ class Players extends Component {
     handleCreatePlayer(e) {
         e.preventDefault();
         const { players, game } = this.props;
-        if(players.length < game.players_per_side * 2) {
-            this.props.handleCreatePlayer(this.state);
+        if((players.length < game.players_per_side * 2) &&
+            this.state.first &&
+            this.state.last &&
+            this.state.age &&
+            this.state.position &&
+            this.state.skill) {
+                this.props.handleCreatePlayer(this.state);
         }
     }
 
