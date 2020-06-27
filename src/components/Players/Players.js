@@ -36,6 +36,7 @@ class Players extends Component {
     handleCreatePlayer(e) {
         e.preventDefault();
         const { players, game } = this.props;
+        // validating fields are completed before creating new player
         if((players.length < game.players_per_side * 2) &&
             this.state.first &&
             this.state.last &&
@@ -49,6 +50,7 @@ class Players extends Component {
     handleRandomise(e) {
         e.preventDefault();
         const { players, game, uploaded } = this.props;
+        // validating that user has not exceeed max number of players
         if(players.length === game.players_per_side * 2) {
             this.props.handlePlayerUpload(game.id);
             this.props.handleRandomise(game, uploaded);
@@ -57,17 +59,13 @@ class Players extends Component {
 
     render() {
 
-        const { players, game, uploaded } = this.props;
+        const { players, game } = this.props;
         const { first, last, age, skill, position } = this.state;
 
         return (
             <>
-                <form
-                    className="players__wrapper"
-                    >
-
+                <form className="players__wrapper">
                     <h1 className="display-5 players__title">Create your players</h1>
-
                     <label className="b-text-3">Player first name</label>
                     <input
                         onChange={ (e) => this.handleFirstNameChange(e) }
@@ -146,7 +144,6 @@ class Players extends Component {
                             <option value="Forward">Forward</option>
                         </select>
                     </div>
-                    {/* inline style for margin needs to be consolidated */}
                     { position ? <p className="hidden">error</p> : <p style={{ marginTop: ".2rem"}} className="error-3">Enter player position.</p> }
 
                     <div className="flex align-center">
@@ -154,27 +151,24 @@ class Players extends Component {
                             <img className="icon" alt="" src={require("../../assets/icons/plus-square-solid.svg")}/>
                             <p className="b-text-3">Create</p>
                         </button>
-
                         <p className="players__tally display-5">{ players.length } / { game.players_per_side * 2 }</p>
-
                     </div>
 
                     <div>
                         <button onClick={ (e) => this.handleRandomise(e) } className="btn">Randomise</button>
                     </div>
 
-
                 </form>
 
                 <div className="field__teams">
-                    {/**
-                     * Creates an iterable object with a length property set to the size of players per side the user has selected. Avoids polluting the component namespace with an array just so that we can iterate over to create markers. Also checks to see if the size per team has exceeded the amount of markers we have or our validation rules.
-                     *
-                     */}
+                    {/* creates an array from the players side integer in state
+                        iterates n times to create enough markers */}
                     { game.players_per_side <= 9 ? (Array.from({length: game.players_per_side}, (item, index) =>
                         <div key={ index } className={`player__marker${index + 1}`}>P{ index + 1 }</div>
                         )) : null
                     }
+                    {/* creates an array from the players side integer in state
+                        iterates n times to create enough markers */}
                     { game.players_per_side <= 9 ? (Array.from({length: game.players_per_side}, (item, index) =>
                         <div key={ index } className={`player2__marker${index + 1}`}>P{ index + 1 }</div>
                         )) : null

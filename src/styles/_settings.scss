@@ -1,3 +1,5 @@
+/* changing font size globally across app */
+
 :root {
     font-size: 90%;
 }
@@ -8,42 +10,48 @@
     font-family: 'ArchivoBlack';
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/ArchivoBlack-Regular.ttf') format('truetype')
+    src: url('../assets/fonts/ArchivoBlack-Regular.ttf') format('truetype');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'SourceSansPro' ;
     font-style: normal;
     font-weight: 200;
-    src: url('../assets/fonts/SourceSansPro-ExtraLight.ttf') format('truetype')
+    src: url('../assets/fonts/SourceSansPro-ExtraLight.ttf') format('truetype');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'SourceSansPro' ;
     font-style: normal;
     font-weight: 300;
-    src: url('../assets/fonts/SourceSansPro-Light.ttf') format('truetype')
+    src: url('../assets/fonts/SourceSansPro-Light.ttf') format('truetype');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'SourceSansPro' ;
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype')
+    src: url('../assets/fonts/SourceSansPro-Regular.ttf') format('truetype');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'SourceSansPro' ;
     font-style: normal;
     font-weight: 600;
-    src: url('../assets/fonts/SourceSansPro-Bold.ttf') format('truetype')
+    src: url('../assets/fonts/SourceSansPro-Bold.ttf') format('truetype');
+    font-display: fallback;
 }
 
 @font-face {
     font-family: 'SourceSansPro' ;
     font-style: normal;
     font-weight: 900;
-    src: url('../assets/fonts/SourceSansPro-Black.ttf') format('truetype')
+    src: url('../assets/fonts/SourceSansPro-Black.ttf') format('truetype');
+    font-display: fallback;
 }
 
 /* fonts */
@@ -53,9 +61,9 @@ $font: "SourceSansPro", helvetica, sans-serif;
 
 /* colors */
 
-$primaryColor: #2B7E29;
-$secondaryColor: #1cb320;
-$tertiaryColor: #E2CF02;
+$primaryColor: #2B7F27;
+$secondaryColor: #1cc323;
+$tertiaryColor: #d4d100;
 $darkGrey: #666;
 $lightGrey: #999;
 $white: #eee;
@@ -63,7 +71,6 @@ $white: #eee;
 /* utility */
 
 body {
-    /* better solution for this */
     background-color: $primaryColor;
 }
 
@@ -88,11 +95,8 @@ a {
 }
 
 .container {
-    // margin: 0 auto;
     position: relative;
-
-
-    // full viewport height minus and footer
+    // to keep the footer at the bottom of the page
     min-height: calc(100vh - 4rem);
     display: flex;
     flex-direction: column;

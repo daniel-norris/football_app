@@ -1,4 +1,4 @@
-
+// action creator for new player array
 export const createPlayer = ({ first, last, age, skill, position }) => {
     return {
         type: "CREATE_PLAYER",
@@ -10,6 +10,7 @@ export const createPlayer = ({ first, last, age, skill, position }) => {
     };
 };
 
+// action creator for new game object containing teams
 export const createTeams = (data) => {
     return {
         type: "CREATE_TEAMS",
@@ -17,6 +18,7 @@ export const createTeams = (data) => {
     };
 };
 
+// action creator for new game object containing players and teams
 export const updateGame = (data) => {
     return {
         type: "UPDATE_GAME",
@@ -24,7 +26,11 @@ export const updateGame = (data) => {
     };
 };
 
-
+/**
+ *  O(n) algorithm to shuffle players
+ *  the function also splits the players array into two parts and assigns each team a team_id that corresponds with id on api
+ *  saves the new teams in state to later be pushed as an array of player objects to api
+ */
 export const randomiseTeams = () => {
 
     return (dispatch, getState) => {

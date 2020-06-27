@@ -82,10 +82,7 @@ class Teams extends Component {
                 </form>
 
                 <div className="field__teams">
-                    {/**
-                     * Creates an iterable object with a length property set to the size of players per side the user has selected. Avoids polluting the component namespace with an array just so that we can iterate over to create markers. Also checks to see if the size per team has exceeded the amount of markers we have or our validation rules.
-                     *
-                     */}
+                    {/* creates an array from the players side integer in state */}
                     { players_side <= 9 ? (Array.from({length: players_side}, (item, index) =>
                         <div key={ index } className={`player__marker${index + 1}`}>P{ index + 1 }</div>
                         )) : null

@@ -1,3 +1,4 @@
+// result of the Fisher-Yates shuffle in state.js - this is updating state with temporary team1 and team2 objects
 export const randomiseTeams = (state, { team1, team2 }) => ({
     ...state,
     team1: team1,
@@ -5,6 +6,7 @@ export const randomiseTeams = (state, { team1, team2 }) => ({
     uploaded: true,
 })
 
+// creating players individually in state in an array to later be sent via POST to api
 export const createPlayer = (state, { first, last, age, skill, position }) => ({
     ...state,
     players: [
@@ -18,11 +20,13 @@ export const createPlayer = (state, { first, last, age, skill, position }) => ({
     ],
 })
 
+// api response is creating a game object in state which contains teams
 export const createTeams = (state, { teams }) => ({
     ...state,
     game: teams
 })
 
+// updating state with new game object in state which contains teams and players
 export const updateGame = (state, { game }) => ({
     ...state,
     game: game,
@@ -49,7 +53,7 @@ export const toTwoDecimal = value => {
     return +value.toFixed(2);
 }
 
-// returns boolean if aggregate skill ratings are equal
+// returns truthy if aggregate skill ratings are equal
 export const isTie = state => {
     return team1SumSkill(state) === team2SumSkill(state);
 }

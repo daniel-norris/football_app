@@ -4,8 +4,6 @@
         background-color: $primaryColor;
         width: 70vw;
 
-        // offsets the hieght of the footer
-        // padding-bottom: 5rem;
         &__feature {
             display: flex;
             flex-direction: column;
@@ -34,8 +32,6 @@
         background-color: $primaryColor;
         width: 70vw;
 
-        // offsets the hieght of the footer
-        // padding-bottom: 5rem;
         &__feature {
             display: flex;
             flex-direction: column;
@@ -64,8 +60,6 @@
         background-color: $primaryColor;
         width: 70vw;
 
-        // offsets the hieght of the footer
-        // padding-bottom: 5rem;
         &__feature {
             display: flex;
             flex-direction: column;
@@ -91,8 +85,6 @@
     .landing {
         background-color: $primaryColor;
 
-        // offsets the hieght of the footer
-        // padding-bottom: 5rem;
         &__feature {
             display: flex;
             flex-direction: row;
@@ -111,7 +103,6 @@
         width: 5rem;
         height: 5rem;
     }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -120,8 +111,6 @@
     .landing {
         background-color: $primaryColor;
 
-        // offsets the hieght of the footer
-        // padding-bottom: 5rem;
         &__feature {
             display: flex;
             flex-direction: row;
@@ -144,8 +133,6 @@
         width: 6rem;
         height: 6rem;
     }
-
-
 }
 
 

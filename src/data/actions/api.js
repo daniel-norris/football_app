@@ -21,7 +21,6 @@ export const postPlayers = (id) => {
         }
     }
 
-
 export const postTeams = ({ team_1, team_2, players_side }) => {
     return (dispatch) => {
         /**

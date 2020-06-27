@@ -1,3 +1,6 @@
+#attribution {
+    display: none;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -76,7 +79,6 @@
             left: 10.5rem;
             top: 6.4rem;
         }
-
     }
 
     .field__teams {
@@ -88,7 +90,6 @@
         height: 18rem;
         background: no-repeat center url("../assets/images/SVG/pitch2.svg");
         background-size: contain;
-
     }
 
     %player-600 {
@@ -179,7 +180,6 @@
             left: 15rem;
             top: 7rem;
         }
-
     }
 
     .player2__marker {
@@ -255,7 +255,6 @@
             left: 15rem;
             top: 4.5rem;
         }
-
     }
 }
 
@@ -288,7 +287,6 @@
     }
 
     .demo__marker {
-
         &1 {
             @extend %demo-650;
             // position on field
@@ -336,7 +334,6 @@
             left: 17rem;
             top: 5rem;
         }
-
     }
 
     .field__teams {
@@ -348,7 +345,6 @@
         height: 25rem;
         background: no-repeat center url("../assets/images/SVG/pitch2.svg");
         background-size: contain;
-
     }
 
     %player-650 {
@@ -367,7 +363,6 @@
     }
 
     .player__marker {
-
         &1 {
             @extend %player-650;
             // position on field
@@ -439,7 +434,6 @@
             left: 24rem;
             top: 9.5rem;
         }
-
     }
 
     .player2__marker {
@@ -521,11 +515,9 @@
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-
     .field__landing {
         margin-top: 3rem;
         position: relative;
-
 
         // scaling svgs as background image
         width: 45rem;
@@ -598,7 +590,6 @@
             left: 20rem;
             top: 5rem;
         }
-
     }
 
     .field__teams {
@@ -610,7 +601,6 @@
         height: 35rem;
         background: no-repeat center url("../assets/images/SVG/pitch2.svg");
         background-size: contain;
-
     }
 
     %player {
@@ -701,7 +691,6 @@
             left: 31.5rem;
             top: 11.5rem;
         }
-
     }
 
     .player2__marker {
@@ -777,7 +766,5 @@
             left: 31.5rem;
             top: 8.5rem;
         }
-
     }
-
 }

@@ -1,12 +1,14 @@
 import React from 'react';
 
+/* routing */
 import {
-    Link,
     Router,
     Route,
     Switch
 } from 'react-router-dom';
+import history from '../history';
 
+/* components */
 import Landing from './Landing/Landing';
 import Players from './Players/index.js';
 import Teams from './Teams/index.js';
@@ -14,8 +16,6 @@ import Randomise from './Randomise/index.js';
 import Footer from './Footer/Footer';
 import Field from './Field/index.js';
 import Demo from './Demo/Demo';
-
-import history from '../history';
 import Header from './Header/Header';
 
 const App = () => {
@@ -65,7 +65,6 @@ const App = () => {
                 <Footer />
 
             </div>
-
 
         </Router>
     )

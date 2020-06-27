@@ -158,29 +158,6 @@ it('calculate winner from team skill rating', () => {
 
     expect(result.game.winner).toEqual(2);
 
-    // result = predictWinner({
-    //     ...many,
-    //     game: {
-    //         ...many.game,
-    //         team_1: {
-    //             ...many.game['team_1'],
-    //             players: [
-    //                 {
-    //                     id: 5,
-    //                     first_name: "asdf",
-    //                     last_name: "asdf",
-    //                     full_name: "asdf asdf",
-    //                     skill: 8,
-    //                     age: 21,
-    //                     position: "Forward",
-    //                 }
-    //             ]
-    //         }
-    //     }
-    // })
-
-    // expect(result.game.winner).toEqual(3);
-
 });
 
 it('calculate win percentage chance', () => {
@@ -251,6 +228,7 @@ it('calculate win percentage chance', () => {
 
 it('reduces', () => {
     // reducer tests here
+
 });
 
 

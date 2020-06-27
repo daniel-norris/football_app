@@ -1,4 +1,3 @@
-
 const initial = {
     players: [],
     game: [],

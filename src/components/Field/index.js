@@ -9,13 +9,6 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        // handleGameUpdate: () => dispatch(getGame()),
-    }
-};
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Field);
+export default connect(mapStateToProps)(Field);
 
 
