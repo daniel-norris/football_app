@@ -157,7 +157,7 @@ it('calculates win probability based off avg skill rating of team', () => {
 
     let result = predictWinner(many);
 
-    expect(result.game.winner).toEqual(4);
+    expect(result.game.winner).toEqual(1);
 
     // let result = predictWinner(many);
 

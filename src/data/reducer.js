@@ -33,15 +33,15 @@ export const team1Skill = ({ game }) => {
     return game['team_1'].players.reduce((acc, val) => acc.skill + val.skill);
 }
 
-export const team2Skill = ({ game }) => ({
-
-})
+export const team2Skill = ({ game }) => {
+    return game['team_2'].players.reduce((acc, val) => acc.skill + val.skill);
+}
 
 export const predictWinner = state => ({
     ...state,
     game: {
         ...state.game,
-        winner: team1Skill(state),
+        winner: team1Skill(state) > team2Skill(state) ? 1 : 2,
     }
 })
 
