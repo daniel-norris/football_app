@@ -9,6 +9,11 @@ export const postPlayers = (id) => {
          *  POST /players
          */
         axios.post("/players", { players: getState().players }).then(() => {
+            /**
+             * chained promise to overcome delays in post request above
+             *
+             *  GET /games/id
+             */
             return axios.get(`/games/${id}`);
             }).then(({ data }) => {
                 dispatch(updateGame(data.data));
@@ -35,7 +40,9 @@ export const postTeams = ({ team_1, team_2, players_side }) => {
 export const getGame = (id) => {
     return (dispatch) => {
         /**
-         *  GET /game
+         * handles componentdidmount if user navigates away from page
+         *
+         *  GET /games/id
          */
         axios.get(`/games/${id}`).then(({ data }) => {
             dispatch(updateGame(data.data));

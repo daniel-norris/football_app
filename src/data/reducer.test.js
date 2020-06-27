@@ -4,8 +4,7 @@ import reducer, {
     randomiseTeams,
     predictWinner,
     team1SumSkill,
-    team2SumSkill,
-    averageSkill
+    team2SumSkill
 } from './reducer';
 import initial from './initial';
 
@@ -95,7 +94,7 @@ it('has post player object successfully been sent', () => {
 
 });
 
-it('calculates win probability based off avg skill rating of team', () => {
+it('calculate winner from team skill rating', () => {
     // create win probability tests here
 
     let many = {
@@ -158,10 +157,97 @@ it('calculates win probability based off avg skill rating of team', () => {
     let result = predictWinner(many);
 
     expect(result.game.winner).toEqual(2);
-    // expect(result.game['team_1'].winChance).toEqual(0);
+
+    // result = predictWinner({
+    //     ...many,
+    //     game: {
+    //         ...many.game,
+    //         team_1: {
+    //             ...many.game['team_1'],
+    //             players: [
+    //                 {
+    //                     id: 5,
+    //                     first_name: "asdf",
+    //                     last_name: "asdf",
+    //                     full_name: "asdf asdf",
+    //                     skill: 8,
+    //                     age: 21,
+    //                     position: "Forward",
+    //                 }
+    //             ]
+    //         }
+    //     }
+    // })
+
+    // expect(result.game.winner).toEqual(3);
 
 });
 
+it('calculate win percentage chance', () => {
+    // create win probability tests here
+
+    let many = {
+        uploaded: false,
+        game: {
+            id: 1,
+            players_per_side: 2,
+            winner: "",
+            team_1: {
+                id: 1,
+                name: "asdfas",
+                players: [
+                    {
+                        id: 1,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 1,
+                        age: 21,
+                        position: "Forward",
+                    },
+                    {
+                        id: 2,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 3,
+                        age: 21,
+                        position: "Forward",
+                    }
+                ]
+            },
+            team_2: {
+                id: 2,
+                name: "asdfas",
+                players: [
+                    {
+                        id: 3,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 5,
+                        age: 21,
+                        position: "Forward",
+                    },
+                    {
+                        id: 4,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 3,
+                        age: 21,
+                        position: "Forward",
+                    }
+                ]
+            },
+        }
+    }
+
+    let result = predictWinner(many);
+
+    expect(result.game['team_1'].winChance).toEqual(0.33);
+    expect(result.game['team_2'].winChance).toEqual(0.67);
+});
 
 it('reduces', () => {
     // reducer tests here

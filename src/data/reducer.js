@@ -30,26 +30,42 @@ export const updateGame = (state, { game }) => ({
 })
 
 export const team1SumSkill = ({ game }) => {
-    return game['team_1'].players.reduce((acc, val) => acc.skill + val.skill, 0);
+    return game['team_1'].players.map((player, index) => player.skill).reduce((acc, val) => +acc + +val, 0);
 }
 
 export const team2SumSkill = ({ game }) => {
-    return game['team_2'].players.reduce((acc, val) => acc.skill + val.skill, 0);
+    return game['team_2'].players.map((player, index) => player.skill).reduce((acc, val) => +acc + +val, 0);
+}
+
+export const sumBothTeamSkill = state => {
+    return team1SumSkill(state) + team2SumSkill(state);
+}
+
+export const toTwoDecimal = value => {
+    return +value.toFixed(2);
+}
+
+export const isTie = state => {
+    return team1SumSkill(state) === team2SumSkill(state);
+}
+
+export const whoGreaterSkill = state => {
+    return team1SumSkill(state) > team2SumSkill(state) ? 1 : 2;
 }
 
 export const predictWinner = state => ({
     ...state,
     game: {
         ...state.game,
-        winner: team1SumSkill(state) > team2SumSkill(state) ? 1 : 2,
-        // team_1: {
-        //     ...state.game['team_1'],
-        //     winChance: team1SumSkill / (team1SumSkill + team2SumSkill),
-        // },
-        // team_2: {
-        //     ...state.game['team_2'],
-        //     winChance: team2SumSkill / (team1SumSkill + team2SumSkill),
-        // }
+        winner: isTie(state) ? 3 : (whoGreaterSkill(state)),
+        team_1: {
+            ...state.game['team_1'],
+            winChance: toTwoDecimal(team1SumSkill(state) / sumBothTeamSkill(state)),
+        },
+        team_2: {
+            ...state.game['team_2'],
+            winChance: toTwoDecimal(team2SumSkill(state) / sumBothTeamSkill(state)),
+        }
     }
 })
 
