@@ -2,12 +2,13 @@ import reducer, {
     createPlayer,
     createTeams,
     randomiseTeams,
+    predictWinner,
 } from './reducer';
 import initial from './initial';
 
 const initialState = {
     players: [],
-    games: [],
+    game: [],
 };
 
 it('creates a player', () => {
@@ -44,47 +45,124 @@ it('creates a player', () => {
 it('creates two teams', () => {
     // create team creation tests here
 
-    let result = createTeams(initialState, { teams: { team_1: { name: "Squad Uno" } }});
+    let result = createTeams(initialState, {
+        teams: {
+            id: 1,
+            players_per_side: 5,
+            winner: "",
+            team_1: {
+                id: 1,
+                name: "Squad Uno",
+                players: [],
+            },
+            team_2: {
+                id: 2,
+                name: "Squad Dos",
+                players: [],
+            }
+        }
+    });
 
-    expect(result.games[0]).toEqual({ team_1: { name: "Squad Uno" }});
-    expect(result.games).not.toBe(initialState.games);
+    expect(result.game).toEqual({
+        id: 1,
+        players_per_side: 5,
+        winner: "",
+        team_1: {
+            id: 1,
+            name: "Squad Uno",
+            players: [],
+        },
+        team_2: {
+            id: 2,
+            name: "Squad Dos",
+            players: [],
+        }
+    });
 
-    result = createTeams(result, { teams: { team_1: { name: "Squad Dos" } }})
-
-    expect(result.games[0]).toEqual({ team_1: { name: "Squad Uno" }});
-    expect(result.games[1]).toEqual({ team_1: { name: "Squad Dos" }});
 });
 
 
-it('randomly assigns a team to each player', () => {
-    // create random team allocation tests here
+it('reducer logic after randomisation', () => {
+    // create reducer randomise team tests here
 
-    let result = createTeams(initialState, { teams: { team_1: { name: "Squad Uno" } }});
+    let many = {
+        uploaded: false,
+        game: {
+            id: 1,
+            players_per_side: 6,
+            winner: "",
+            team_1: {
+                id: 1,
+                name: "asdfas",
+                players: [
+                    {
+                        id: 1,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 2,
+                        age: 21,
+                        position: "Forward",
+                    },
+                    {
+                        id: 2,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 2,
+                        age: 21,
+                        position: "Forward",
+                    }
+                ]
+            },
+            team_2: {
+                id: 2,
+                name: "asdfas",
+                players: [
+                    {
+                        id: 3,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 2,
+                        age: 21,
+                        position: "Forward",
+                    },
+                    {
+                        id: 4,
+                        first_name: "asdf",
+                        last_name: "asdf",
+                        full_name: "asdf asdf",
+                        skill: 2,
+                        age: 21,
+                        position: "Forward",
+                    }
+                ]
+            },
+        }
+    }
+
+    let result = randomiseTeams(many, { uploaded: true });
+
+    expect(result.uploaded).toEqual({ uploaded: true });
+
+    // expect(result.games[0]).toEqual({ team_1: { name: "Squad Uno" }});
+    // expect(result.games).not.toBe(initialState.games);
+
+    // result = createTeams(result, { teams: { team_1: { name: "Squad Dos" } }})
 
 });
+
+it('calculates win probability based off avg skill rating of team', () => {
+    // create win probability tests here
+
+
+
+});
+
 
 it('reduces', () => {
     // reducer tests here
 });
 
 
-
-
-
-
-
-
-
-
-// players = [
-//     { first: "Alex", last: "Honnold", age: 26, height: 175, skill: 5, position: "Forward" },
-//     { first: "Adam", last: "Ondra", age: 25, height: 189, skill: 5, position: "Forward" },
-//     { first: "Lynn", last: "Hill", age: 41, height: 165, skill: 5, position: "Forward" },
-//     { first: "Tommy", last: "Caldwell", age: 34, height: 175, skill: 5, position: "Forward" },
-//     { first: "Jimmy", last: "Chin", age: 38, height: 185, skill: 4, position: "Midfielder" },
-//     { first: "Catherine", last: "Destivelle", age: 37, height: 155, skill: 5, position: "Forward" },
-//     { first: "Dean", last: "Potter", age: 32, height: 165, skill: 4, position: "Midfielder" },
-//     { first: "Chris", last: "Bonnington", age: 81, height: 165, skill: 5, position: "Goalkeeper" },
-//     { first: "Conrad", last: "Anker", age: 51, height: 175, skill: 5, position: "Goalkeeper" },
-//     { first: "Nirmal", last: "Purja", age: 26, height: 175, skill: 5, position: "Forward" },
-// ]

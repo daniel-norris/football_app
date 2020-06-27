@@ -29,12 +29,20 @@ export const updateGame = (state, { game }) => ({
     loaded: true,
 })
 
+export const predictWinner = state => ({
+    ...state,
+    game: {
+        ...state.game,
+        winner: 1,
+    }
+})
+
 export const reducer = (state, action) => {
     switch (action.type) {
         case "CREATE_PLAYER": return createPlayer(state, action);
         case "CREATE_TEAMS": return createTeams(state, action);
         case "UPDATE_GAME": return updateGame(state, action);
-        case "RANDOMISE_TEAMS": return randomiseTeams(state, action);
+        case "RANDOMISE_TEAMS": return predictWinner(randomiseTeams(state, action));
         default: return state;
     }
 }
