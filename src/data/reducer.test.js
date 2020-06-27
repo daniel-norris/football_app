@@ -3,6 +3,7 @@ import reducer, {
     createTeams,
     randomiseTeams,
     predictWinner,
+    team1Skill,
 } from './reducer';
 import initial from './initial';
 
@@ -89,10 +90,13 @@ it('reducer logic after randomisation', () => {
     let result = randomiseTeams(initialState, { uploaded: true });
 
     expect(result.uploaded).toEqual(true);
+
 });
 
 it('calculates win probability based off avg skill rating of team', () => {
     // create win probability tests here
+
+
 
     let many = {
         uploaded: false,
@@ -151,6 +155,65 @@ it('calculates win probability based off avg skill rating of team', () => {
         }
     }
 
+    let result = predictWinner(many);
+
+    expect(result.game.winner).toEqual(4);
+
+    // let result = predictWinner(many);
+
+    // expect(result.game).toEqual({
+        //     id: 1,
+        //     players_per_side: 6,
+        //     winner: 1,
+    //     team_1: {
+    //         id: 1,
+    //         name: "asdfas",
+    //         players: [
+    //             {
+    //                 id: 1,
+    //                 first_name: "asdf",
+    //                 last_name: "asdf",
+    //                 full_name: "asdf asdf",
+    //                 skill: 2,
+    //                 age: 21,
+    //                 position: "Forward",
+    //             },
+    //             {
+    //                 id: 2,
+    //                 first_name: "asdf",
+    //                 last_name: "asdf",
+    //                 full_name: "asdf asdf",
+    //                 skill: 2,
+    //                 age: 21,
+    //                 position: "Forward",
+    //             }
+    //         ]
+    //     },
+    //     team_2: {
+    //         id: 2,
+    //         name: "asdfas",
+    //         players: [
+    //             {
+    //                 id: 3,
+    //                 first_name: "asdf",
+    //                 last_name: "asdf",
+    //                 full_name: "asdf asdf",
+    //                 skill: 2,
+    //                 age: 21,
+    //                 position: "Forward",
+    //             },
+    //             {
+    //                 id: 4,
+    //                 first_name: "asdf",
+    //                 last_name: "asdf",
+    //                 full_name: "asdf asdf",
+    //                 skill: 1,
+    //                 age: 21,
+    //                 position: "Forward",
+    //             }
+    //         ]
+    //     },
+    // });
 });
 
 

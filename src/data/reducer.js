@@ -29,11 +29,19 @@ export const updateGame = (state, { game }) => ({
     loaded: true,
 })
 
+export const team1Skill = ({ game }) => {
+    return game['team_1'].players.reduce((acc, val) => acc.skill + val.skill);
+}
+
+export const team2Skill = ({ game }) => ({
+
+})
+
 export const predictWinner = state => ({
     ...state,
     game: {
         ...state.game,
-        winner: 1,
+        winner: team1Skill(state),
     }
 })
 
